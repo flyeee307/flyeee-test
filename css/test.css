@@ -1,0 +1,15 @@
+.menu {
+  position: relative;
+}
+.menu li {
+  float: left;
+}
+.menu a {
+  display: block;
+}
+.menu span {
+  color: #fff;
+}
+.menu i {
+  background: url(dot-icon.png);
+}
