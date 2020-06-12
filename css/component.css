@@ -837,7 +837,21 @@ ul {
 	margin: 0;
 	/*border: 1px solid red;*/
 }
-
+@media (max-width: 992px){
+	.grid-sizer,.grid-item{
+		width: 33.33333%;
+	}
+}
+@media (max-width: 768px){
+	.grid-sizer,.grid-item{
+		width: 50%;
+	}
+}
+@media (max-width: 576px){
+	.grid-sizer,.grid-item{
+		width: 100%;
+	}
+}
 .grid-item img {
 	display: block;
 	max-width: 100%;
