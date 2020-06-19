@@ -44,7 +44,7 @@ $(document).ready(function(){
 	        $('.jq-sqare-grid').show();
 	        $('.jq-grid').hide();
 	        // 正方形縮圖排版
-			var $grid = $('.jq-sqare-grid').isotope({
+			var $gridS = $('.jq-sqare-grid').isotope({
 			  itemSelector: '.sqare-grid-item',
 			  layoutMode: 'masonryHorizontal',
 			  masonryHorizontal: {
@@ -54,26 +54,26 @@ $(document).ready(function(){
 			  }
 			});
 
-			// $grid.on( 'click', '.grid-item-content', function() {
+			// $gridS.on( 'click', '.grid-item-content', function() {
 			//   $( this ).parent('.sqare-grid-item').toggleClass('is-expanded');
-			//   $grid.isotope('layout');
+			//   $gridS.isotope('layout');
 			// });
 
 			// layout Isotope after each image loads
-			$grid.imagesLoaded().progress( function() {
-			  $grid.isotope('layout');
+			$gridS.imagesLoaded().progress( function() {
+			  $gridS.isotope('layout');
 			});
 
 			// filter items on button click
 			$('.filter-button-group').on( 'click', 'button', function() {
 			  var filterValue = $(this).attr('data-filter');
-			  $grid.isotope({ filter: filterValue });
+			  $gridS.isotope({ filter: filterValue });
 			});
 	    } else {
 	        $('.jq-sqare-grid').hide();
 	        $('.jq-grid').show();
 	        // init Isotope
-			var $grid = $('.jq-grid').isotope({
+			var $gridL = $('.jq-grid').isotope({
 			  // options
 			  itemSelector: '.grid-item',
 			  layoutMode: 'masonry',
@@ -84,13 +84,13 @@ $(document).ready(function(){
 			  }
 			});
 			// layout Isotope after each image loads
-			$grid.imagesLoaded().progress( function() {
-			  $grid.isotope('layout');
+			$gridL.imagesLoaded().progress( function() {
+			  $gridL.isotope('layout');
 			});
 			// filter items on button click
 			$('.filter-button-group').on( 'click', 'button', function() {
 			  var filterValue = $(this).attr('data-filter');
-			  $grid.isotope({ filter: filterValue });
+			  $gridL.isotope({ filter: filterValue });
 			});
 	    }
 	}
