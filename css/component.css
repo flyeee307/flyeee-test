@@ -33,6 +33,9 @@
 -----------------------------*/
 /* background
 -----------------------*/
+.wrapper{
+	overflow: hidden;
+}
 .bg{
 	position: fixed;
 	top: 0;
@@ -166,9 +169,13 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 100;
+	z-index: 1000;
+	transition: all .5s;
 	/*height: 80px;*/
 	/*background-color: #fff;*/
+}
+.header.hideUp{
+	top: -80px;
 }
 /* navbar
 -----------------------*/
@@ -288,6 +295,34 @@
 .popup-menu__item:hover{
 	color: #e881a7;
 }
+
+/* go to Top
+-----------------------*/
+.top{
+	width: 52px;
+	height: 52px;
+	/*background-color: #fff;*/
+	border-radius: 50%;
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	line-height: 52px;
+	text-align: center;
+	border: 1.4px solid #00EBE2;
+	transition: all .3s;
+}
+.top a{
+	font-size: 16px;
+	font-weight: 400;
+	color: #00EBE2;
+}
+.top:hover{
+	background-color: #00EBE2;
+}
+.top:hover a{
+	color: #fff;
+}
+
 /*---------------------------*/
 /* $About
 -----------------------------*/
@@ -808,18 +843,18 @@ ul {
 /*html { overflow-y: scroll; }*/
 
 .grid {
-  /*background: #DDD;*/
-  margin: 0 -5px;
+	/*background: #DDD;*/
+	margin: 0 -5px;
 }
 
 /* clear fix */
 .grid:after {
-  content: '';
-  display: block;
-  clear: both;
+	content: '';
+	display: block;
+	clear: both;
 }
 
-/* ---- .grid-item ---- */
+/* ---- grid-item ---- */
 
 /* fluid 5 columns */
 .grid-sizer,
@@ -855,12 +890,38 @@ ul {
 .grid-item img {
 	display: block;
 	max-width: 100%;
-	transition: all .3s;
+	/*transition: all .3s;*/
+	z-index: 98;
 }
-.grid-item:hover img{
+.grid-item:hover .grid-item__inner{
 	transform: scale(1.2);
 	box-shadow: 0 0 20px rgba(0,0,0,.5);
+	z-index: 100;
+}
+.grid-item__inner{
+	width: 100%;
+	height: 100%;
 	z-index: 99;
+	border: 1px solid red;
+	transition: all .3s ease;
+	overflow: hidden;
+}
+/* hover時顯示底部黑色漸層 */
+.grid-item__inner:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	opacity: 0;
+	background: linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,0));
+	transition: all .3s ease;
+	z-index: 100;
+}
+.grid-item:hover :after{
+	/*height: 100px;*/
+	/*opacity: 1;*/
 }
 .button-group{
 	margin-bottom: 50px;
@@ -885,6 +946,129 @@ ul {
 .button-group .btn:focus{
 	border: 1.4px solid #00EBE2;
 }
+
+/* 正方形縮圖排版 */
+
+.jq-sqare-grid{
+	/*background: #DDD;*/
+	max-width: 1140px !important;
+	margin: 0 auto !important;
+	height: 600px; /* inherit height from body */
+	/*border: 1px solid pink;*/
+	white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+/*@media (max-width: 768px){
+	.jq-sqare-grid{
+		max-width: 720px;
+		margin: 0 10px;
+	}
+	.sqare-grid-item{
+		height: 200px;
+		margin-right: 10px;
+	}
+	.grid-item-content {
+	  width: 200px;
+	  height: 200px;
+	}
+}*/
+@media (max-width: 576px){
+	.jq-sqare-grid{
+		max-width: 336px !important;
+	}
+}
+.jq-sqare-grid:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.sqare-grid-item{
+	  float: left;
+}
+/* item is invisible, but used for layout */
+.sqare-grid-item{
+	width: auto;
+	height: 100px;
+	/*height: 100px;*/
+	margin-right: 10px;
+	/*border: 1px solid #00EBE2;*/
+}
+
+/* item-content is visible, and transitions size */
+.grid-item-content {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  /*height: 80px;*/
+  /*background: #0D8;*/
+  /*border: 2px solid blue;*/
+  /*border-color: hsla(0, 0%, 0%, 0.7);*/
+  -webkit-transition: all 0.4s;
+     -moz-transition: all 0.4s;
+       -o-transition: all 0.4s;
+          transition: all 0.4s;
+}
+
+/*.sqare-grid-item:hover .grid-item-content {
+  background: #8CF;
+  cursor: pointer;
+}*/
+
+
+.sqare-grid-item a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	/*border: 1px solid green;*/
+	z-index: 99;
+}
+.sqare-grid-item img {
+	/*display: block;*/
+	vertical-align: middle;
+	/*object-fit: cover;*/
+	/*object-position: center center;*/
+	/*border: 1px solid red;*/
+	/*opacity: 0;*/
+	transition: all .3s;
+	z-index: 98;
+}
+.horizon img{
+	height: 100%;
+	width: auto;
+}
+.vertical img{
+	width: 100%;
+	height: auto;
+}
+.sqare-grid-item:hover img{
+	transform: scale(1.2);
+	box-shadow: 0 0 20px rgba(0,0,0,.5);
+	z-index: 100;
+}
+
+
+
+
+
+
+/* both item and item content change size */
+.grid-item.is-expanded,
+.grid-item.is-expanded .grid-item-content {
+  width: 240px;
+  height: 160px;
+}
+
+.grid-item.is-expanded {
+  z-index: 2;
+}
+
+.grid-item.is-expanded .grid-item-content {
+  background: #F90;
+}
+
+
+
 
 /*---------------------------*/
 /* $Footer
