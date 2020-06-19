@@ -28,56 +28,12 @@ $(document).ready(function(){
 
 
 
-	// init Isotope
-	var $grid = $('.jq-grid').isotope({
-	  // options
-	  itemSelector: '.grid-item',
-	  layoutMode: 'masonry',
-	  percentPosition: true,
-	  // layout mode options
-	  masonry: {
-	    columnWidth: '.grid-sizer'
-	  }
-	});
-	// layout Isotope after each image loads
-	$grid.imagesLoaded().progress( function() {
-	  $grid.isotope('layout');
-	});
-	// filter items on button click
-	$('.filter-button-group').on( 'click', 'button', function() {
-	  var filterValue = $(this).attr('data-filter');
-	  $grid.isotope({ filter: filterValue });
-	});
+	
 
 
 
 
-	// 正方形縮圖排版
-	var $grid = $('.jq-sqare-grid').isotope({
-	  itemSelector: '.sqare-grid-item',
-	  layoutMode: 'masonryHorizontal',
-	  masonryHorizontal: {
-	    // columnWidth: '.sqare-grid-item',
-	    rowHeight: 100,
-		gutter: 10
-	  }
-	});
-
-	// $grid.on( 'click', '.grid-item-content', function() {
-	//   $( this ).parent('.sqare-grid-item').toggleClass('is-expanded');
-	//   $grid.isotope('layout');
-	// });
-
-	// layout Isotope after each image loads
-	$grid.imagesLoaded().progress( function() {
-	  $grid.isotope('layout');
-	});
-
-	// filter items on button click
-	$('.filter-button-group').on( 'click', 'button', function() {
-	  var filterValue = $(this).attr('data-filter');
-	  $grid.isotope({ filter: filterValue });
-	});
+	
 
 
 
@@ -87,9 +43,55 @@ $(document).ready(function(){
 	    if ($(window).width() < 576) {
 	        $('.jq-sqare-grid').show();
 	        $('.jq-grid').hide();
+	        // 正方形縮圖排版
+			var $grid = $('.jq-sqare-grid').isotope({
+			  itemSelector: '.sqare-grid-item',
+			  layoutMode: 'masonryHorizontal',
+			  masonryHorizontal: {
+			    // columnWidth: '.sqare-grid-item',
+			    rowHeight: 100,
+				gutter: 10
+			  }
+			});
+
+			// $grid.on( 'click', '.grid-item-content', function() {
+			//   $( this ).parent('.sqare-grid-item').toggleClass('is-expanded');
+			//   $grid.isotope('layout');
+			// });
+
+			// layout Isotope after each image loads
+			$grid.imagesLoaded().progress( function() {
+			  $grid.isotope('layout');
+			});
+
+			// filter items on button click
+			$('.filter-button-group').on( 'click', 'button', function() {
+			  var filterValue = $(this).attr('data-filter');
+			  $grid.isotope({ filter: filterValue });
+			});
 	    } else {
 	        $('.jq-sqare-grid').hide();
 	        $('.jq-grid').show();
+	        // init Isotope
+			var $grid = $('.jq-grid').isotope({
+			  // options
+			  itemSelector: '.grid-item',
+			  layoutMode: 'masonry',
+			  percentPosition: true,
+			  // layout mode options
+			  masonry: {
+			    columnWidth: '.grid-sizer'
+			  }
+			});
+			// layout Isotope after each image loads
+			$grid.imagesLoaded().progress( function() {
+			  $grid.isotope('layout');
+			});
+			// filter items on button click
+			$('.filter-button-group').on( 'click', 'button', function() {
+			  var filterValue = $(this).attr('data-filter');
+			  $grid.isotope({ filter: filterValue });
+			});
 	    }
 	}
 	$(window).resize(function() {
