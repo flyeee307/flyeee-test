@@ -96,15 +96,14 @@ $(document).ready(function(){
 	// hide #back-top first
 	$(".back-top").hide();
 
+
     $(window).scroll(function(){
 		var pos = $(window).scrollTop();
 		
-		if($(window).innerWidth()<=1440){
-			if (pos > 200) {
-				$('.back-top').show(200);
-			}else{
-				$('.back-top').hide(200);
-			}
+		if (pos > 300 && pos < 6600) {
+			$('.back-top').show(200);
+		}else{
+			$('.back-top').hide(200);
 		}
 	});
 	

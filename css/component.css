@@ -1748,6 +1748,11 @@
 	/*-webkit-background-size: cover;*/
 	/*background-size: contain;*/
 }
+@media (max-width: 575px) {
+	.footer__logo {
+		display: none;
+	}
+}
 .footer__logo img{
 	width: 100%;
 	object-fit: cover;
