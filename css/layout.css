@@ -27,12 +27,25 @@
  */
 .container {
   width: 100%;
-  /*max-width: 1172px;*/
+  /*max-width: 1160px;*/
+  /*width: 1160px;*/
+
   padding-right: 16px;
   padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
-  /*border: 1px solid #000;*/
+  /*border: 1px solid pink;*/
+}
+@media (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 370px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -55,7 +68,7 @@
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1160px;
   }
 }
 

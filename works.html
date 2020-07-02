@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--讓IE使用最新的渲染模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+	<!--將下面的 <meta> 標籤加入到頁面中，可以讓部分國產瀏覽器預設採用高速模式渲染頁面：-->
+    <meta name="renderer" content="webkit">
+	<title>Flyeee Yang's Portfolio</title>
+	<!-- 放入頁籤的icon圖示 -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+	<!-- <link rel="manifest" href="favicon_package_v0.16/site.webmanifest"> -->
+	<link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- css -->
+	<link rel="stylesheet" href="css/plugin/bootstrap/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/component.css">
+
+	<link rel="stylesheet" href="css/plugin/animate/animate.css">
+	<link rel="stylesheet" href="css/plugin/fancybox-master/jquery.fancybox.min.css">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet"> -->
+	
+	<!-- js -->
+	<!--下面這一大塊的註釋是說:"為了讓IE9以下的瀏覽器支援響應式和HTML5標籤.需要引入下面兩個JS檔案"-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="https://kit.fontawesome.com/25f3b20fbc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- Bg -->
+		<!-- <div class="bg"></div> -->
+		<!-- End Bg -->
+		<!-- Header -->
+		<header class="main-header">
+			<div class="container">
+				<div class="row">
+					<nav class="main-nav">
+						<div class="main-nav__logo">
+							<img src="images/logo/Flyeee-logo-flat.svg" alt="Flyeee" title="Flyeee Yang’s Portfolio">	
+						</div>
+						<ul class="main-nav__menu">
+							<li class="main-nav__menu-item"><a id="home" class="main-nav__menu-item-link" href="#">HOME</a></li>
+							<li class="main-nav__menu-item"><a id="about" href="#" class="main-nav__menu-item-link">ABOUT</a></li>
+							<li class="main-nav__menu-item"><a id="works" href="#" class="main-nav__menu-item-link">WORKS</a></li>
+							<li class="main-nav__menu-item"><a id="contact" href="#" class="main-nav__menu-item-link">CONTACT</a></li>
+						</ul>
+						<a href="#popup-overlay" class="menu-toggler">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+						<div id="popup-overlay" class="popup-menu">
+							<div class="u-clearfix">
+								<a href="#" class="popup-menu--close u-push-right">
+									<span></span>
+									<span></span>
+								</a>
+							</div>
+							<div class="container">
+								<ul>
+									<li class="popup-about"><a href="#" class="popup-menu__item">ABOUT</a></li>
+									<li class="popup-skills"><a href="#" class="popup-menu__item">SKILLS</a></li>
+									<li class="popup-experience"><a href="#" class="popup-menu__item">EXPERIENCE</a></li>
+									<li class="popup-works"><a href="#" class="popup-menu__item">WORKS</a></li>
+									<li class="popup-contact"><a href="#" class="popup-menu__item">CONTACT</a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="shape-rect"></div>
+		</header>
+		<!-- End Header -->
+		
+		<!-- Main -->
+		<section class="portfolio-content">
+		<!-- Isotope 圖片篩選插件 -->
+			
+			<div class="container">
+				<!-- Isotope - imagesLoaded progress -->
+				<div class="button-group filter-button-group">
+				  <button class="btn" data-filter="*">全部</button>
+				  <button class="btn" data-filter=".ui">UI</button>
+				  <button class="btn" data-filter=".web">網頁</button>
+				  <button class="btn" data-filter=".gd">平面設計</button>
+				  <button class="btn" data-filter=".imgco">影像合成</button>
+				  <button class="btn" data-filter=".camera">攝影</button>
+				  <button class="btn" data-filter=".dp">電腦繪圖</button>
+				  <button class="btn" data-filter=".lg">LOGO</button>
+				</div>
+					<div class="jq-grid">
+					  <div class="grid-sizer"></div>
+					  <div class="grid-item gd dp">
+					    <div class="grid-item__inner">
+					    	<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+					    		<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+					    	</a>
+					    </div>
+					  </div>
+					  <div class="grid-item gd dp">
+					    <div class="grid-item__inner">
+					    	<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+					    		<img src="images/portfolio_gallery/海報-02.jpeg"/>
+					    	</a>
+					    </div>
+					  </div>
+					  <div class="grid-item gd imgco">
+					    <div class="grid-item__inner">
+					    	<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+					    		<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+					    	</a>
+					    </div>
+					  </div>
+					  <div class="grid-item gd imgco sectionB sectionD">
+					    <div class="grid-item__inner">
+					    	<a href="images/portfolio_gallery/★母乳哺育_棉線篇_直_ol.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #4">
+					    		<img src="images/portfolio_gallery/★母乳哺育_棉線篇_直_ol.jpeg"/>
+					    	</a>
+					    </div>
+					  </div>
+					  <div class="grid-item gd dp">
+					    <div class="grid-item__inner">
+					    	<a href="images/portfolio_gallery/★20141127_教育部_美感教育海報_W59.4H84.1cm.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #5">
+					    		<img src="images/portfolio_gallery/★20141127_教育部_美感教育海報_W59.4H84.1cm.jpeg"/>
+					    	</a>
+					    </div>
+					  </div>
+					  <div class="grid-item gd dp">
+					    <div class="grid-item__inner">
+					    	<a href="images/portfolio_gallery/★103年_衛生福利部_保護司海報_W59.4H84.1cm_1120.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #6">
+					    		<img src="images/portfolio_gallery/★103年_衛生福利部_保護司海報_W59.4H84.1cm_1120.jpeg"/>
+					    	</a>
+					    </div>
+					  </div>
+					  <div class="grid-item gd dp">
+					    <div class="grid-item__inner">
+					    	<a href="images/portfolio_gallery/★wedding篇.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #7">
+					    		<img src="images/portfolio_gallery/★wedding篇.jpeg"/>
+					    	</a>
+					    </div>
+					  </div>
+					  <div class="grid-item gd dp">
+					    <div class="grid-item__inner">
+					    	<a href="images/portfolio_gallery/司法院人民觀審海報.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #8">
+					    		<img src="images/portfolio_gallery/司法院人民觀審海報.jpeg"/>
+					    	</a>
+					    </div>
+					  </div>
+					  
+					</div>
+
+
+
+			</div>
+			<!-- 正方形縮圖排版 -->
+				<div class="jq-sqare-grid">
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content horizon">
+			    		<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+			    			<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+			    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content vertical">
+				    		<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+				    			<img src="images/portfolio_gallery/海報-02.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd imgco">
+				    <div class="grid-item-content horizon">
+				    		<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+				    			<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content horizon">
+			    		<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+			    			<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+			    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content vertical">
+				    		<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+				    			<img src="images/portfolio_gallery/海報-02.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd imgco">
+				    <div class="grid-item-content horizon">
+				    		<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+				    			<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content horizon">
+			    		<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+			    			<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+			    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content vertical">
+				    		<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+				    			<img src="images/portfolio_gallery/海報-02.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd imgco">
+				    <div class="grid-item-content horizon">
+				    		<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+				    			<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content horizon">
+			    		<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+			    			<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+			    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content vertical">
+				    		<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+				    			<img src="images/portfolio_gallery/海報-02.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd imgco">
+				    <div class="grid-item-content horizon">
+				    		<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+				    			<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  
+
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content horizon">
+			    		<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+			    			<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+			    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content vertical">
+				    		<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+				    			<img src="images/portfolio_gallery/海報-02.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd imgco">
+				    <div class="grid-item-content horizon">
+				    		<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+				    			<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content horizon">
+			    		<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+			    			<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+			    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content vertical">
+				    		<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+				    			<img src="images/portfolio_gallery/海報-02.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd imgco">
+				    <div class="grid-item-content horizon">
+				    		<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+				    			<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content horizon">
+			    		<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+			    			<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+			    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content vertical">
+				    		<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+				    			<img src="images/portfolio_gallery/海報-02.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd imgco">
+				    <div class="grid-item-content horizon">
+				    		<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+				    			<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content horizon">
+			    		<a href="images/portfolio_gallery/★★20161229_台酒_10秒SP_小檔.mp4" data-fancybox="" data-height="900" data-caption="Caption #1">
+			    			<img src="images/portfolio_gallery/104_2_決選_活動背板-01.jpeg"/>
+			    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd dp">
+				    <div class="grid-item-content vertical">
+				    		<a href="images/portfolio_gallery/海報-02.jpeg" data-fancybox="gallery" data-height="900" data-caption="Caption #2">
+				    			<img src="images/portfolio_gallery/海報-02.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+				  <div class="sqare-grid-item gd imgco">
+				    <div class="grid-item-content horizon">
+				    		<a href="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg" data-fancybox="gallery imgco" data-height="900" data-caption="Caption #3">
+				    			<img src="images/portfolio_gallery/★OMAR平面稿B_0409_橫.jpeg"/>
+				    		</a>
+				    </div>
+				  </div>
+
+
+
+
+
+				</div>
+
+			<!-- /Isotope 圖片篩選插件 -->	
+		</section>
+		<!-- End Main -->
+
+		<!-- Footer -->
+		<footer class="footer fixed-bottom bg-color--gray">
+			<div class="container">
+				<div class="row footer-content justify-content-center align-items-center">
+					<div class="footer__logo">
+						<img src="images/logo/Flyeee-logo-flat.svg" alt="Flyeee" title="Flyeee Yang’s Portfolio">	
+					</div>
+					<p class="copyright color--darkgray">Copyrights © 2020  Designed & Developed by <span>Flyeee Yang</span></p>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer -->
+		<!-- Go Top -->
+		<a href="#" class="back-top"></a>
+
+
+		<!-- End Go Top -->
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="js/plugin/jquery/jquery-3.5.1.min.js"></script>
+	<!-- <script src="js/plugin/filterizr-master/dist/jquery.filterizr.min.js"></script> -->
+	<script src="js/plugin/Isotope/isotope.pkgd.js"></script>
+	<script src="js/plugin/imagesloaded/imagesloaded.pkgd.js"></script>
+	<script src="js//plugin/masonry-horizontal/masonry-horizontal.js"></script>
+	<script src="js/plugin/fancybox-master/dist/jquery.fancybox.min.js"></script>
+	<script src="js/all.js"></script>
+</body>
+</html>

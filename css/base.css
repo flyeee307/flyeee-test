@@ -23,7 +23,7 @@
 /*---------------------------*/
 /* $Font import
 -----------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 /*---------------------------*/
 /* $Reset
 -----------------------------*/
@@ -400,70 +400,77 @@ ul{
 /* $Color
 -----------------------------*/
 /* backgroung color */
-.bg-color--primary{background-color: #6487f5;}
-.bg-color--secondary{background-color: #ff628f;}
-.bg-color--black{background-color: #484848;}
-.bg-color--gray{background-color: #cbcbcb;}
-.bg-color--white{background-color: #fefefe;}
+.bg-color--primary{background-color: #00EBE2;}
+.bg-color--secondary{background-color: #FB0C66;}
+.bg-color--black{background-color: #333333;}
+.bg-color--gray{background-color: #EBEBEB;}
+.bg-color--darkgray{background-color: #A6A6A6;}
+.bg-color--white{background-color: #fff;}
 
 /* text color */
-.color--primary{color: #6487f5;}
-.color--secondary{color: #ff628f;}
-.color--black{color: #484848;}
-.color--gray{color: #cbcbcb;}
-.color--white{color: #fefefe;}
+.color--primary{color: #00EBE2;}
+.color--secondary{color: #FB0C66;}
+.color--black{color: #333333;}
+.color--gray{color: #EBEBEB;}
+.color--darkgray{color: #A6A6A6;}
+.color--white{color: #fff;}
 /*---------------------------*/
 /* $Typography
 -----------------------------*/
 /* Global */
 html,body{
-	font-family: 'Helvetica', 'Roboto', 'Arial', sans-serif;
-	font-size: 14px;
+	font-family: 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
 	font-weight: 400;
 	line-height: 20px;
+}
+html{
+  font-size: 10px;
+}
+body{
+  font-size: 1.4rem;
 }
 /* heading */
 h1, h2, h3, h4, h5, h6, p{
 	margin: 0;
-  color: #484848;
+  color: #777777;
 }
 h1{
-	font-family: 'Helvetica', 'Roboto', 'Arial', sans-serif;
-	font-size: 80px;
-	font-weight: 800;
-	line-height: 1.35;
+  font-family: 'Source Sans Pro', 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-size: 5.4rem;
+	font-weight: 900;
+	line-height: 1;
 	/*letter-spacing: -0.02em;*/
-	margin-top: 24px;
-	margin-bottom: 24px;
+	margin-top: 70px;
+	margin-bottom: 18px;
 }
 h2{
-	font-family: 'Helvetica', 'Roboto', 'Arial', sans-serif;
-	font-size: 48px;
+  font-family: 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-size: 2.8rem;
 	font-weight: 600;
 	/*line-height: 48px;*/
 	margin-top: 24px;
-	margin-bottom: 24px;
+	margin-bottom: 53px;
 }
 h3{
-	font-family: 'Helvetica', 'Roboto', 'Arial', sans-serif;
-	font-size: 40px;
+  font-family: 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-size: 2.4rem;
 	font-weight: 600;
-	line-height: 48px;
-	margin-top: 24px;
-	margin-bottom: 24px;
+	line-height: 2;
+	margin-top: 22px;
+	margin-bottom: 14px;
 }
 h4{
-	font-family: 'Helvetica', 'Roboto', 'Arial', sans-serif;
-	font-size: 24px;
-	font-weight: 600;
-	line-height: 32px;
+  font-family: 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 1.5;
 	/*-moz-osx-font-smoothing: grayscale;*/
 	margin-top: 24px;
 	margin-bottom: 24px;
 }
 h5{
-	font-family: 'Helvetica', 'Roboto', 'Arial', sans-serif;
-	font-size: 20px;
+  font-family: 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1;
 	/*letter-spacing: 0.02em;*/
@@ -471,26 +478,27 @@ h5{
 	margin-bottom: 16px;
 }
 h6{
-	font-family: 'Helvetica', 'Roboto', 'Arial', sans-serif;
-	font-size: 18px;
+  font-family: 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-size: 1.4rem;
 	font-weight: 400;
-	line-height: 32px;
+	line-height: 1;
 	/*letter-spacing: 0.04em;*/
 	margin-top: 24px;
 	margin-bottom: 16px;
 }
 p{
-  font-family: 'Helvetica', 'Roboto', 'Arial', sans-serif;
-	font-size: 16px;
+  font-family: 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-size: 1.8rem;
 	font-weight: 400;
-	line-height: 32px;
+	line-height: 1.8;
 	letter-spacing: 0;
-	margin-bottom: 16px;
+	margin-bottom: 24px;
+  text-align: justify;
 }
-.subtitle{
+/*.subtitle{
   font-size: 48px;
   font-weight: 900;
-  font-family: 'Raleway','Helvetica', 'Roboto', 'Arial', sans-serif;
+  font-family: 'Noto Sans TC', 'Helvetica', 'Roboto', 'Arial', sans-serif;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -499,7 +507,7 @@ p{
   font-size: 40px;
 
   }
-}
+}*/
 /* link */
 a{
 	text-decoration: none;
@@ -649,6 +657,7 @@ hr{
 .u-margin-32{margin: 32px !important;}
 .u-margin-40{margin: 40px !important;}
 .u-margin-48{margin: 48px !important;}
+.u-margin-50{margin: 50px !important;}
 .u-mt-4{margin-top: 4px !important;}
 .u-mt-8{margin-top: 8px !important;}
 .u-mt-16{margin-top: 16px !important;}
@@ -663,6 +672,7 @@ hr{
 .u-mr-32{margin-right: 32px !important;}
 .u-mr-40{margin-right: 40px !important;}
 .u-mr-48{margin-right: 48px !important;}
+.u-mr-50{margin-right: 50px !important;}
 .u-mb-4{margin-bottom: 4px !important;}
 .u-mb-8{margin-bottom: 8px !important;}
 .u-mb-16{margin-bottom: 16px !important;}
@@ -670,6 +680,7 @@ hr{
 .u-mb-32{margin-bottom: 32px !important;}
 .u-mb-40{margin-bottom: 40px !important;}
 .u-mb-48{margin-bottom: 48px !important;}
+.u-mb-50{margin-bottom: 50px !important;}
 .u-ml-4{margin-left: 4px !important;}
 .u-ml-8{margin-left: 8px !important;}
 .u-ml-16{margin-left: 16px !important;}
@@ -677,6 +688,7 @@ hr{
 .u-ml-32{margin-left: 32px !important;}
 .u-ml-40{margin-left: 40px !important;}
 .u-ml-48{margin-left: 48px !important;}
+.u-ml-50{margin-left: 50px !important;}
 
 /* text */
 .u-text-center{text-align: center !important;}
