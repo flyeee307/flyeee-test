@@ -1,20 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="56px" height="50px" viewBox="0 0 56 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Icons/Regular/gem</title>
-    <defs>
-        <path d="M49.8055556,8.25 L16.1944444,8.25 C15.8125,8.25 15.4496528,8.44334993 15.2395833,8.77204482 L5.69097222,23.0026 C5.4140625,23.4279698 5.44270833,23.9886846 5.7578125,24.3753845 L32.1119792,57.3222133 C32.5703125,57.8925956 33.4296875,57.8925956 33.8880208,57.3222133 L60.2421875,24.3753845 C60.5572917,23.9790171 60.5859375,23.4279698 60.3090278,23.0026 L50.7699653,8.77204482 C50.5503472,8.44334993 50.1970486,8.25 49.8055556,8.25 Z M47.9626736,12.8903984 L54.0069444,22.1711953 L47.4756944,22.1711953 L42.5390625,12.8903984 L47.9626736,12.8903984 L47.9626736,12.8903984 Z M28.6649306,12.8903984 L37.3255208,12.8903984 L42.2621528,22.1711953 L23.7378472,22.1711953 L28.6649306,12.8903984 Z M18.0373264,12.8903984 L23.4609375,12.8903984 L18.5243056,22.1711953 L11.9930556,22.1711953 L18.0373264,12.8903984 Z M13.9314236,26.8115937 L18.8394097,26.8115937 L25.3611111,42.2795884 L13.9314236,26.8115937 Z M23.7569444,26.8115937 L42.2430556,26.8115937 L33,50.3326132 L23.7569444,26.8115937 Z M40.6388889,42.2795884 L47.1510417,26.8115937 L52.0590278,26.8115937 L40.6388889,42.2795884 Z" id="path-1"></path>
-    </defs>
-    <g id="Flyeee-Yang's-Portfolio" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="網頁版index" transform="translate(-768.000000, -2021.000000)">
-            <g id="Icons/Regular/gem" transform="translate(763.000000, 2013.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="gem" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
-                <g id="Colors/5th" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
-                    <rect id="Rectangle" x="0" y="0" width="66" height="66"></rect>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 66 58.9" style="enable-background:new 0 0 66 58.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<title>Icons/Regular/gem</title>
+<g id="Flyeee-Yang_x27_s-Portfolio">
+	<g id="網頁版index" transform="translate(-768.000000, -2021.000000)">
+		<g id="Icons_x2F_Regular_x2F_gem" transform="translate(763.000000, 2013.000000)">
+			<g id="gem">
+				<path id="path-1_1_" class="st0" d="M54.8,12.7H21.2c-0.4,0-0.7,0.2-1,0.5l-9.5,14.2c-0.3,0.4-0.2,1,0.1,1.4l26.4,32.9
+					c0.5,0.6,1.3,0.6,1.8,0l26.4-32.9c0.3-0.4,0.3-0.9,0.1-1.4l-9.5-14.2C55.5,12.9,55.2,12.7,54.8,12.7z M53,17.4l6,9.3h-6.5
+					l-4.9-9.3H53L53,17.4z M33.7,17.4h8.7l4.9,9.3H28.7L33.7,17.4z M23,17.4h5.4l-4.9,9.3H17L23,17.4z M18.9,31.3h4.9l6.5,15.5
+					L18.9,31.3z M28.8,31.3h18.5L38,54.8L28.8,31.3z M45.6,46.7l6.5-15.5h4.9L45.6,46.7z"/>
+			</g>
+		</g>
+	</g>
+</g>
 </svg>
