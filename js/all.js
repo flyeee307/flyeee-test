@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 			var st = this.scrollY;
 
-			if (st < lastScrollY) {
+			if (st < lastScrollY || lastScrollY < 0) {
 				$('.main-header').removeClass('hideUp');
 			} else {
 				$('.main-header').addClass('hideUp');
