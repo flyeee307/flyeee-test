@@ -839,13 +839,13 @@
 		background:
 		url(../images/bg/white-printer-paper-196645@w768px.jpeg),
 		-webkit-linear-gradient(270deg, rgba(51,51,51,0) -10%, rgba(51,51,51,1) 60%);
-		-webkit-background-size: 768px 513px, cover;
-		background-size: 768px 513px, cover;
+		-webkit-background-size: 1500px 1001px cover;
+		background-size: 1500px 1001px cover;
 		background-repeat: no-repeat, no-repeat;
 		background-position:
-			0 0,
+			center top,
 			right top;
-		background-attachment: fixed;
+		background-attachment: scroll;
 		background-blend-mode: multiply;
 		opacity: .4;
 	}
