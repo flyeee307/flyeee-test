@@ -834,10 +834,10 @@
 @media (max-width: 768px) {
 	.color-mask {
 		background:
-		url(../images/bg/white-printer-paper-196645@w768px.jpeg),
+		url(../images/bg/white-printer-paper-196645@w1500px.jpeg),
 		linear-gradient(270deg, rgba(51,51,51,0) -10%, rgba(51,51,51,1) 60%);
 		background:
-		url(../images/bg/white-printer-paper-196645@w768px.jpeg),
+		url(../images/bg/white-printer-paper-196645@w1500px.jpeg),
 		-webkit-linear-gradient(270deg, rgba(51,51,51,0) -10%, rgba(51,51,51,1) 60%);
 		-webkit-background-size: 1500px 1001px cover;
 		background-size: 1500px 1001px cover;
