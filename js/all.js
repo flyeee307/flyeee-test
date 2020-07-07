@@ -49,6 +49,17 @@ $(document).ready(function(){
 		}
 	});
 
+
+
+	// 視差滾動
+	// $('.shape-line-a').stellar();
+	$(window).stellar();
+
+	// $.stellar({
+	//   horizontalOffset: 40,
+	//   verticalOffset: 150
+	// });
+
 	
 
 
