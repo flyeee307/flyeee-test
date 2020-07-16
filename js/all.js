@@ -49,6 +49,45 @@ $(document).ready(function(){
 		}
 	});
 
+	
+
+
+	// 大頭照的視差滾動
+	function myFixed() {
+		$(window).scroll(function() {
+			var i = $('.about__portrait.myFixed').offset().top;
+			var j = $(window).scrollTop();
+			var m = $('.about__portrait.myFixed').css('margin-top');
+			console.log(i);
+			console.log(j);
+			if (j > 330 && j < 755) {
+				
+				$('.about__portrait.myFixed').stop().animate({
+					'margin-top': (40+j-330)+'px'
+				},0);
+			}
+		});
+	}
+	if($(window).width() >= 768) {
+		$('.about__portrait').addClass('myFixed');
+		myFixed();
+	} else {
+		$('.about__portrait').removeClass('myFixed');
+	}
+
+	$(window).resize(function() {
+		if($(window).width() >= 768) {
+			$('.about__portrait').addClass('myFixed');
+			myFixed();
+		} else {
+			$('.about__portrait').removeClass('myFixed');
+		}
+	});
+
+
+	
+
+	
 
 
 	// 視差滾動
