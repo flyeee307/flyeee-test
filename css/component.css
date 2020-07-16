@@ -242,7 +242,7 @@
 		padding-bottom: 10vh;
 	}
 }
-@media (min-width: 833px) {
+@media (min-width: 800px) {
 	.main-hero__content .row:last-child {
 		padding-bottom: 22vh;
 	}
@@ -621,7 +621,7 @@
 		height: 30vh;
 	}
 }
-@media (min-width: 833px) and (orientation: landscape) {
+@media (min-width: 800px) and (orientation: landscape) {
 	.shape-rect--lg {
 		top: 28vh;
 		height: 68vh;
@@ -693,7 +693,7 @@
 	    left: 438px;
 	}
 }
-@media (min-width: 833px) and (orientation: landscape) {
+@media (min-width: 800px) and (orientation: landscape) {
 	.shape-line-b {
 		top: 124px;
 	    left: 608px;
@@ -713,7 +713,7 @@
 		right: 40px;
 	}
 }
-@media (min-width: 833px) and (orientation: landscape) {
+@media (min-width: 800px) and (orientation: landscape) {
 	.shape-line-c {
 		top: 250px;
 		right: 80px;
@@ -739,7 +739,7 @@
 		right: 30px;
 	}
 }
-@media (min-width: 833px) and (orientation: landscape) {
+@media (min-width: 800px) and (orientation: landscape) {
 	.shape-dot {
 		top: 260px;
 		right: 70px;
@@ -770,7 +770,7 @@
 		left: 630px;
 	}
 }
-@media (min-width: 833px) and (orientation: landscape) {
+@media (min-width: 800px) and (orientation: landscape) {
 	.shape-rect--md {
 		width: 30px;
 		height: 30px;
@@ -854,7 +854,7 @@
 		right: 222px;
 	}
 }
-@media (min-width: 833px) and (orientation: landscape) {
+@media (min-width: 800px) and (orientation: landscape) {
 	.shape-rect--sm {
 		bottom: 44vh;
 		right: 22px;
@@ -1039,7 +1039,7 @@
 		height: 44vh;
 	}
 }
-@media (min-width: 833px) {
+@media (min-width: 800px) {
 	.main-hero {
 		height: 90vh;
 	}
@@ -1226,7 +1226,7 @@
 		max-width: 95%;
 	}
 }
-@media (min-width: 833px) {
+@media (min-width: 800px) {
 	.main-hero__group {
 		padding-bottom: 4px;
 		max-width: 95%;
@@ -1725,7 +1725,7 @@
 		background-position: right center;
 	}
 }
-@media (min-width: 833px) {
+@media (min-width: 800px) {
 	.main-hero__logo {
 		padding-top: 26%;
 	}
@@ -1787,7 +1787,7 @@
 		margin-top: 40px;
 	}
 }
-@media (min-width: 833px) and (orientation: landscape) {
+@media (min-width: 800px) and (orientation: landscape) {
 	.about__portrait {
 		-ms-flex: 0 0 58.333333%;
 	    flex: 0 0 58.333333%;
@@ -2170,7 +2170,7 @@
 		margin-top: -20px;
 	}
 }
-@media (min-width: 833px) {
+@media (min-width: 800px) {
 	.experience-content {
 		margin-top: -60px;
 	}
