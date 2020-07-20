@@ -53,36 +53,75 @@ $(document).ready(function(){
 
 
 	// 大頭照的視差滾動
-	function myFixed() {
+	function myFixed768() {
 		$(window).scroll(function() {
 			var i = $('.about__portrait.myFixed').offset().top;
 			var j = $(window).scrollTop();
 			var m = $('.about__portrait.myFixed').css('margin-top');
 			console.log(i);
 			console.log(j);
-			if (j > 330 && j < 755) {
+			if (j > 780 && j < 800) {
 				
 				$('.about__portrait.myFixed').stop().animate({
-					'margin-top': (40+j-330)+'px'
-				},0);
+					'margin-top': (40+j-780)+'px'
+				}, 400, "linear");
 			}
 		});
 	}
-	if($(window).width() >= 768) {
-		$('.about__portrait').addClass('myFixed');
-		myFixed();
-	} else {
-		$('.about__portrait').removeClass('myFixed');
+
+	function myFixed1280() {
+		$(window).scroll(function() {
+			var i = $('.about__portrait.myFixed').offset().top;
+			var j = $(window).scrollTop();
+			var m = $('.about__portrait.myFixed').css('margin-top');
+			console.log(i);
+			console.log(j);
+			if (j > 440 && j < 605) {
+				
+				$('.about__portrait.myFixed').stop().animate({
+					'margin-top': (40+j-440)+'px'
+				}, 400, "linear");
+			}
+		});
 	}
 
-	$(window).resize(function() {
-		if($(window).width() >= 768) {
-			$('.about__portrait').addClass('myFixed');
-			myFixed();
-		} else {
-			$('.about__portrait').removeClass('myFixed');
-		}
-	});
+	function myFixedResize() {
+		$(window).resize(function() {
+			$('.about__portrait').removeClass('u-mt-40');
+
+			if($(window).width() >= 1280 && $(window).width() < 1920) {
+				
+				$('.about__portrait').css('margin-top', '40px !important');
+				$('.about__portrait').addClass('myFixed');
+				myFixed1280();
+			} else if($(window).width() >= 768 && $(window).width() < 1280) {
+				
+				$('.about__portrait').css('margin-top', '40px !important');
+				$('.about__portrait').addClass('myFixed');
+				myFixed768();
+			} else {
+				$('.about__portrait').removeClass('myFixed');
+				$('.about__portrait').addClass('u-mt-40');
+			}
+		});
+	}
+
+
+
+	if($(window).width() >= 1280 && $(window).width() < 1920) {
+		$('.about__portrait').addClass('myFixed');
+		myFixed1280();
+		myFixedResize();
+	} else if($(window).width() >= 768 && $(window).width() < 1280) {
+		$('.about__portrait').addClass('myFixed');
+		myFixed768();
+		myFixedResize();
+	} 
+
+	myFixedResize();
+	
+
+	
 
 
 	
@@ -149,11 +188,11 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
 		var pos = $(window).scrollTop();
-		
-		if (pos > 300 && pos < 6600) {
-			$('.back-top').show(200);
+
+		if (pos > 300 && pos < 7500) {
+			$('.back-top').stop().fadeIn(400);
 		}else{
-			$('.back-top').hide(200);
+			$('.back-top').stop().fadeOut(200);
 		}
 	});
 	
@@ -281,16 +320,36 @@ $(document).ready(function(){
 		$('body,html').animate({
 			scrollTop: 0
 		}, 400);
-		$('.footer').addClass('z-top');
-		$('.footer__logo').hide(100);
+		// $('.footer').addClass('z-top');
+		// $('.footer__logo').hide(100);
 	});
 
 
 
 	
+	// 圖片輪播初始化
+	$(".owl-carousel").owlCarousel();
 
-
-
+		$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    responsiveClass:true,
+	    responsive:{
+	        0:{
+	            items:1,
+	            nav:true
+	        },
+	        600:{
+	            items:3,
+	            nav:false
+	        },
+	        1000:{
+	            items:5,
+	            nav:true,
+	            loop:false
+	        }
+	    }
+	});
 	
 
 
@@ -309,7 +368,42 @@ $(document).ready(function(){
 	//   }
 	// });
 
+	$('.button-group .btn').click(function() {
+		$(this).addClass('is-active');
+		$(this).siblings().removeClass('is-active');
 
+	});
+
+
+	$('.jq-sqare-grid').scroll(function(){
+		var sleft = $('.jq-sqare-grid').scrollLeft();
+		console.log(sleft);
+	});
+
+	$('.btn.first').click(function() {
+		$('.jq-sqare-grid').animate({
+			scrollLeft: 0
+		}, 200, 'swing');
+	});
+
+	$('.btn.prev').click(function() {
+		$('.jq-sqare-grid').animate({
+			scrollLeft: $('.jq-sqare-grid').scrollLeft()-330
+		}, 200, 'swing');
+	});
+
+	$('.btn.next').click(function() {
+		$('.jq-sqare-grid').animate({
+			scrollLeft: $('.jq-sqare-grid').scrollLeft()+330
+		}, 200, 'swing');
+	});
+
+	$('.btn.last').click(function() {
+		$('.jq-sqare-grid').animate({
+			scrollLeft: $('.jq-sqare-grid').scrollLeft()+2380
+		}, 200, 'swing');
+	});
+	
 
 	// RWD顯示設定
 
