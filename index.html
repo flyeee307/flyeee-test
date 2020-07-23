@@ -19,6 +19,8 @@
 	<!-- css -->
 	<link rel="stylesheet" href="css/plugin/bootstrap/bootstrap.min.css">
 	
+	<link rel="stylesheet" href="css/plugin/jquery_mobile/jquery.mobile-1.4.5.min.css">
+
 	<link rel="stylesheet" href="js/plugin/OwlCarousel/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="js/plugin/OwlCarousel/assets/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/base.css">
@@ -124,8 +126,10 @@
 				<div class="shape-line-a" data-stellar-ratio="0.7" data-stellar-horizontal-offset="30"
      data-stellar-vertical-offset="200"></div>
      			<div class="shape-line-b" data-stellar-ratio="0.5" data-stellar-horizontal-offset="800" data-stellar-vertical-offset="120"></div>
-				<div class="shape-line-c" data-stellar-ratio="0.8" data-stellar-horizontal-offset="700" data-stellar-vertical-offset="160"></div>
-				<div class="shape-dot" data-stellar-ratio="0.7" data-stellar-horizontal-offset="760" data-stellar-vertical-offset="160"></div>
+				<div class="shape-ld">
+					<div class="shape-line-c" data-stellar-ratio="0.8" data-stellar-horizontal-offset="700" data-stellar-vertical-offset="160"></div>
+					<div class="shape-dot" data-stellar-ratio="0.7" data-stellar-horizontal-offset="760" data-stellar-vertical-offset="160"></div>
+				</div>
 			</div>
 			<!-- End Hero -->
 
@@ -392,39 +396,59 @@
 						</div>
 					</div>
 					<div class="container">
-						<div class="row works-group">
-							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
-								<div class="works__imgbox">
-									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
-								</div>
+						<div class="owl-carousel owl-theme">
+							<div class="works__imgbox">
+								<img class="owl-lazy" data-src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
 							</div>
-							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
-								<div class="works__imgbox">
-									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
-								</div>
+							<div class="works__imgbox">
+								<img class="owl-lazy" data-src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
 							</div>
-							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
-								<div class="works__imgbox">
-									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
-								</div>
+							<div class="works__imgbox">
+								<img class="owl-lazy" data-src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
 							</div>
-							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
-								<div class="works__imgbox">
-									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
-								</div>
+							<div class="works__imgbox">
+								<img class="owl-lazy" data-src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
 							</div>
-							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
-								<div class="works__imgbox">
-									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
-								</div>
+							<div class="works__imgbox">
+								<img class="owl-lazy" data-src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
 							</div>
-							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
-								<div class="works__imgbox">
-									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
-								</div>
+							<div class="works__imgbox">
+								<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
 							</div>
 						</div>
-						<div class="row justify-content-center">
+						<!-- <div class="row works-group">
+							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
+								<div class="works__imgbox">
+									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
+								<div class="works__imgbox">
+									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
+								<div class="works__imgbox">
+									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
+								<div class="works__imgbox">
+									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
+								<div class="works__imgbox">
+									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 wow animate__slideInUp animate__delay-1s">
+								<div class="works__imgbox">
+									<img src="images/portfolio/thumbnail/內政部營建署租屋服務分鏡cut1.jpeg" alt="">
+								</div>
+							</div>
+						</div> -->
+						<div class="row justify-content-center  u-pt-16">
 							<a href="works.html" class="btn btn--primary btn--lg">更多作品<div class="btn--icon-arrow"></div></a>
 						</div>
 					</div>
@@ -629,7 +653,11 @@
 	<!-- <script src="js/plugin/Scrolling Parallax Plugin for jQuery/jquery.scrolling-parallax.js"></script> -->
 	<!-- <script src="js/plugin/stellar/jquery.stellar.min.js"></script> -->
 	<!-- <script src="js/plugin/wow/wow.js"></script> -->
+	<script src="js/plugin/jquery_mobile/jquery.mobile-1.4.5.min.js"></script>
+
 	<script src="js/plugin/OwlCarousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/plugin/TouchSwipe/jquery.touchSwipe.min.js"></script>
+	
 	<script>
 		new WOW().init();
 	</script>

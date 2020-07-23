@@ -47,7 +47,11 @@
     max-width: 370px;
   }
 }
-
+@media (min-width: 568px) {
+  .container {
+    max-width: 540px;
+  }
+}
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
