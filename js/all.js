@@ -49,155 +49,174 @@ $(document).ready(function(){
 		}
 	});
 
-	
+	// 背景的垂直視差滾動
+	// $(window).scroll(function() { 
+	//     var wScroll = $(this).scrollTop();
+	//     var slowScroll =  wScroll / 10000 + 60;
+
+	//     $('.color-mask').css({ 
+	//      'transform' : 'translate(0px, '+ slowScroll +'px) scale(1.1)' 
+	//     }); 
+
+ //    }); 
+
+    // $(window).scroll(function() { 
+	   //  var wScroll = $(this).scrollTop();
+	   //  var slowScroll =  wScroll / 50;
+
+	   //  $('.color-mask').css({ 
+	   //   'background-position' : 'center '+ slowScroll +'px'
+	   //  }); 
+
+    // }); 
 
 
-	// // 大頭照的視差滾動
-	// function myFixed768() {
-	// 	$(window).scroll(function() {
-	// 		var i = $('.about__portrait.myFixed').offset().top;
-	// 		var j = $(window).scrollTop();
-	// 		var m = $('.about__portrait.myFixed').css('margin-top');
-	// 		console.log(i);
-	// 		console.log(j);
-	// 		if (j > 220 && j < 680) {
+	// 大頭照的視差滾動
+	function myFixed768() {
+		$(window).scroll(function() {
+			var i = $('.about__portrait.myFixed').offset().top;
+			var j = $(window).scrollTop();
+			var m = $('.about__portrait.myFixed').css('margin-top');
+			console.log(i);
+			console.log(j);
+			if (j > 220 && j < 680) {
 				
-	// 			$('.about__portrait.myFixed').stop().animate({
-	// 				'margin-top': (40+j-220)+'px'
-	// 			}, 40, "linear");
-	// 		}
-	// 	});
-	// }
+				$('.about__portrait.myFixed').stop().animate({
+					'margin-top': (40+j-220)+'px'
+				}, 40, "linear");
+			}
+		});
+	}
 
-	// function myFixed800() {
-	// 	$(window).scroll(function() {
-	// 		var i = $('.about__portrait.myFixed').offset().top;
-	// 		var j = $(window).scrollTop();
-	// 		var m = $('.about__portrait.myFixed').css('margin-top');
-	// 		console.log(i);
-	// 		console.log(j);
-	// 		if (j > 390 && j < 870) {
+	function myFixed800() {
+		$(window).scroll(function() {
+			var i = $('.about__portrait.myFixed').offset().top;
+			var j = $(window).scrollTop();
+			var m = $('.about__portrait.myFixed').css('margin-top');
+			console.log(i);
+			console.log(j);
+			if (j > 390 && j < 870) {
 				
-	// 			$('.about__portrait.myFixed').stop().animate({
-	// 				'margin-top': (40+j-390)+'px'
-	// 			}, 40, "linear");
-	// 		}
-	// 	});
-	// }
+				$('.about__portrait.myFixed').stop().animate({
+					'margin-top': (40+j-390)+'px'
+				}, 40, "linear");
+			}
+		});
+	}
 
-	// function myFixed1024_768() {
-	// 	$(window).scroll(function() {
-	// 		var i = $('.about__portrait.myFixed').offset().top;
-	// 		var j = $(window).scrollTop();
-	// 		var m = $('.about__portrait.myFixed').css('margin-top');
-	// 		console.log(i);
-	// 		console.log(j);
-	// 		if (j > 550 && j < 870) {
+	function myFixed1024_768() {
+		$(window).scroll(function() {
+			var i = $('.about__portrait.myFixed').offset().top;
+			var j = $(window).scrollTop();
+			var m = $('.about__portrait.myFixed').css('margin-top');
+			console.log(i);
+			console.log(j);
+			if (j > 550 && j < 870) {
 				
-	// 			$('.about__portrait.myFixed').stop().animate({
-	// 				'margin-top': (40+j-550)+'px'
-	// 			}, 40, "linear");
-	// 		}
-	// 	});
-	// }
+				$('.about__portrait.myFixed').stop().animate({
+					'margin-top': (40+j-550)+'px'
+				}, 40, "linear");
+			}
+		});
+	}
 
-	// function myFixed1024_1366() {
-	// 	$(window).scroll(function() {
-	// 		var i = $('.about__portrait.myFixed').offset().top;
-	// 		var j = $(window).scrollTop();
-	// 		var m = $('.about__portrait.myFixed').css('margin-top');
-	// 		console.log(i);
-	// 		console.log(j);
-	// 		if (j > 624 && j < 970) {
+	function myFixed1024_1366() {
+		$(window).scroll(function() {
+			var i = $('.about__portrait.myFixed').offset().top;
+			var j = $(window).scrollTop();
+			var m = $('.about__portrait.myFixed').css('margin-top');
+			console.log(i);
+			console.log(j);
+			if (j > 624 && j < 970) {
 				
-	// 			$('.about__portrait.myFixed').stop().animate({
-	// 				'margin-top': (40+j-624)+'px'
-	// 			}, 40, "linear");
-	// 		}
-	// 	});
-	// }
+				$('.about__portrait.myFixed').stop().animate({
+					'margin-top': (40+j-624)+'px'
+				}, 40, "linear");
+			}
+		});
+	}
 
-	// function myFixed1280() {
-	// 	$(window).scroll(function() {
-	// 		var i = $('.about__portrait.myFixed').offset().top;
-	// 		var j = $(window).scrollTop();
-	// 		var m = $('.about__portrait.myFixed').css('margin-top');
-	// 		console.log(i);
-	// 		console.log(j);
-	// 		if (j > 590 && j < 768) {
+	function myFixed1280() {
+		$(window).scroll(function() {
+			var i = $('.about__portrait.myFixed').offset().top;
+			var j = $(window).scrollTop();
+			var m = $('.about__portrait.myFixed').css('margin-top');
+			console.log(i);
+			console.log(j);
+			if (j > 590 && j < 768) {
 				
-	// 			$('.about__portrait.myFixed').stop().animate({
-	// 				'margin-top': (40+j-590)+'px'
-	// 			}, 40, "linear");
-	// 		}
-	// 	});
-	// }
+				$('.about__portrait.myFixed').stop().animate({
+					'margin-top': (40+j-590)+'px'
+				}, 40, "linear");
+			}
+		});
+	}
 
-	// function myFixedResize() {
-	// 	$(window).resize(function() {
-	// 		$('.about__portrait').css('margin-top', '40px !important');
+	function myFixedResize() {
+		$(window).resize(function() {
+			$('.about__portrait').css('margin-top', '40px !important');
 
-	// 		$('.about__portrait').removeClass('u-mt-40');
+			$('.about__portrait').removeClass('u-mt-40');
 
-	// 		if($(window).width() >= 1280 && $(window).width() < 1920) {
+			if($(window).width() >= 1280 && $(window).width() < 1920) {
 				
-	// 			$('.about__portrait').css('margin-top', '40px');
-	// 			$('.about__portrait').addClass('myFixed');
-	// 			myFixed1280();
-	// 		} else {
-	// 			if($(window).width() >= 768 && $(window).width() < 1280) {
-	// 				// console.log($(window).width());
-	// 				$('.about__portrait').css('margin-top', '80px');
-	// 				$('.about__portrait').addClass('myFixed');
-	// 				if ($(window).width() == 800 && $(window).height() == 414) {
-	// 					myFixed800();
-	// 				} else if ($(window).width() == 1024 && $(window).height() == 768) {
-	// 					myFixed1024_768();
-	// 				} else if ($(window).width() == 1024 && $(window).height() == 1366) {
-	// 					myFixed1024_1366();
-	// 				} else {
-	// 					myFixed768();
-	// 				}
-	// 				myFixedResize();
-	// 			} else {
-	// 				$('.about__portrait').removeClass('myFixed');
-	// 				$('.about__portrait').addClass('u-mt-40');
-	// 				myFixedResize();
-	// 			}
-	// 		}
-	// 	});
-	// }
+				$('.about__portrait').css('margin-top', '40px');
+				$('.about__portrait').addClass('myFixed');
+				myFixed1280();
+			} else {
+				if($(window).width() >= 768 && $(window).width() < 1280) {
+					// console.log($(window).width());
+					$('.about__portrait').css('margin-top', '80px');
+					$('.about__portrait').addClass('myFixed');
+					if ($(window).width() == 800 && $(window).height() == 414) {
+						myFixed800();
+					} else if ($(window).width() == 1024 && $(window).height() == 768) {
+						myFixed1024_768();
+					} else if ($(window).width() == 1024 && $(window).height() == 1366) {
+						myFixed1024_1366();
+					} else {
+						myFixed768();
+					}
+					myFixedResize();
+				} else {
+					$('.about__portrait').removeClass('myFixed');
+					$('.about__portrait').addClass('u-mt-40');
+					myFixedResize();
+				}
+			}
+		});
+	}
 
 
 
-	// if($(window).width() >= 1280 && $(window).width() < 1920) {
-	// 	$('.about__portrait').addClass('myFixed');
-	// 	myFixed1280();
-	// 	myFixedResize();
-	// } else {
-	// 	if($(window).width() >= 768 && $(window).width() < 1280) {
-	// 		// console.log($(window).width());
-	// 		$('.about__portrait').addClass('myFixed');
-	// 		if ($(window).width() == 800 && $(window).height() == 414) {
-	// 			myFixed800();
-	// 			// myFixedResize();
-	// 		} else if ($(window).width() == 1024 && $(window).height() == 768) {
-	// 			myFixed1024_768();
-	// 			// myFixedResize();
-	// 		} else if ($(window).width() == 1024 && $(window).height() == 1366) {
-	// 			myFixed1024_1366();
-	// 			// myFixedResize();
-	// 		} else {
-	// 			myFixed768();
-	// 			// myFixedResize();
-	// 		}
-	// 		myFixedResize();
-	// 	} else {
-	// 		myFixedResize();
-	// 	}
-	// }
+	if($(window).width() >= 1280 && $(window).width() < 1920) {
+		$('.about__portrait').addClass('myFixed');
+		myFixed1280();
+		myFixedResize();
+	} else {
+		if($(window).width() >= 768 && $(window).width() < 1280) {
+			// console.log($(window).width());
+			$('.about__portrait').addClass('myFixed');
+			if ($(window).width() == 800 && $(window).height() == 414) {
+				myFixed800();
+				// myFixedResize();
+			} else if ($(window).width() == 1024 && $(window).height() == 768) {
+				myFixed1024_768();
+				// myFixedResize();
+			} else if ($(window).width() == 1024 && $(window).height() == 1366) {
+				myFixed1024_1366();
+				// myFixedResize();
+			} else {
+				myFixed768();
+				// myFixedResize();
+			}
+			myFixedResize();
+		} else {
+			myFixedResize();
+		}
+	}
 
-	// // myFixedResize();
+	// myFixedResize();
 	
 
 	

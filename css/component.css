@@ -830,6 +830,7 @@
 @media (min-width: 414px) and (height: 896px) {
 	.shape-rect--lg {
 		height: 69vh;
+		/*transform: translate3d(0px, -30px, 0px);*/
 	}
 }
 @media (min-width: 568px) and (orientation: landscape) {
@@ -1561,6 +1562,12 @@
 	width: 100%;
 	height: 84vh;
 	/*border: 3px solid blue;*/
+	/*transform-style: preserve-3d;*/
+	/*perspective: 1px;*/
+	/*transform: translateZ(-1px);*/
+	/*overflow: hidden;*/
+	/*border-radius: 0 0 0 80px;*/
+
 }
 @media (width: 411px) and (height: 823px) {
 	.main-hero {
@@ -1645,14 +1652,23 @@
 	-webkit-border-radius: 0 0 0 80px;
 	-o-border-radius: 0 0 0 80px;
 	-ms-border-radius: 0 0 0 80px;
-	background-color: rgba(51,51,51,1);
 	overflow: hidden;
+	/*border: 1px solid red;*/
+}
+.multi-bg__inner {
+	width: 100%;
+	height: 100%;
+	/*bottom: 0;
+	right: 0;*/
+	background-color: rgba(51,51,51,1);
+	/*overflow: hidden;*/
 	z-index: -1;
+	/*transform: translate3d(-23%, -30%, -1px);*/
 }
 .color-mask {
 	width: 100%;
 	height: 100%;
-	background:url(../images/bg/hero_bg_md.jpg) left center;
+	background:url(../images/bg/hero_bg_md.jpg) center 100%;
 	background-size: cover;
 	-webkit-background-size: cover;
 	background-repeat: no-repeat;
@@ -1665,52 +1681,113 @@
 }
 @media (min-width: 768px) {
 	.color-mask {
-		background:url(../images/bg/hero_bg_lg.jpg) center center;
-		background-size: cover;
-		-webkit-background-size: cover;
+		background:url(../images/bg/hero_bg_lg.jpg) center top;
+		background-size: 1000px 667px;
+		-webkit-background-size: 1000px 667px;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		transform: translate(0px, -44px) scale(1.2);
 	}
 }
 @media (min-width: 800px) and (orientation: landscape) {
 	.color-mask {
-		background:url(../images/bg/hero_bg_lg.jpg) center center;
+		background:url(../images/bg/hero_bg_lg.jpg) center bottom;
 		background-size: cover;
 		-webkit-background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: initial;
+		transform: translate(0px, 60px) scale(1.2);
 	}
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) and (orientation: landscape) {
 	.color-mask {
-		background:url(../images/bg/hero_bg_xl.jpg) center center;
+		background:url(../images/bg/hero_bg_lg.jpg) center bottom;
 		background-size: cover;
 		-webkit-background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		transform: translate(0px, -60px) scale(1.2);
+	}
+}
+@media (min-width: 1200px) {
+	.color-mask {
+		background:url(../images/bg/hero_bg_xl.jpg) center 100%;
+		background-size: cover;
+		-webkit-background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		/*transform: translate(0px, -20px) scale(1.2);*/
+	}
+}
+@media (min-width: 1440px) {
+	.color-mask {
+		background:url(../images/bg/hero_bg_xl.jpg) center 100%;
+		background-size: cover;
+		-webkit-background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		transform: translate(0px, -60px) scale(1.2);
+	}
+}
+@media (min-width: 1536px) {
+	.color-mask {
+		background:url(../images/bg/hero_bg_xl.jpg) center 100%;
+		background-size: cover;
+		-webkit-background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		transform: translate(0px, -70px) scale(1.2);
+	}
+}
+@media (min-width: 1920px) {
+	.color-mask {
+		background:url(../images/bg/hero_bg_xl.jpg) center 100%;
+		background-size: cover;
+		-webkit-background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		transform: translate(0px, -90px) scale(1.2);
 	}
 }
 .dot-bg {
-	width: 2600px;
-	height: 4600px;
+	width: 100%;
+	height: 100%;
 	background: url(../images/bg/dot.svg) left bottom;
 	-webkit-background-size: 10px;
 	background-size: 10px;
+	/*width: 2600px;
+	height: 4600px;
 	-webkit-transform: rotate(45deg) translate(-80%,0%);
 	   -moz-transform: rotate(45deg) translate(-80%,0%);
 	    -ms-transform: rotate(45deg) translate(-80%,0%);
 		 -o-transform: rotate(45deg) translate(-80%,0%);
-	        transform: rotate(45deg) translate(-80%,0%);
+	        transform: rotate(45deg) translate(-80%,0%);*/
 	opacity: .4;
 	-moz-opacity: .4;
 	-webkit-opacity: .4;
 	-o-opacity: .4;
 	-ms-opacity: .4;
+	background-attachment: scroll;
 }
 @media (min-width: 575px) {
 	.dot-bg {
 		-webkit-background-size: 12px;
 		background-size: 12px;
+	}
+}
+@media (min-width: 768px) {
+	.dot-bg {
+		background-attachment: fixed;
+	}
+}
+@media (min-width: 800px) and (orientation: landscape) {
+	.dot-bg {
+		background-attachment: initial;
+	}
+}
+@media (min-width: 1024px) {
+	.dot-bg {
+		background-attachment: fixed;
 	}
 }
 @media (min-width: 1200px) {
@@ -1719,6 +1796,16 @@
 		background-size: 15px;
 	}
 }
+/*.shape-mask {
+	bottom: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	background-color: #00EBE2;
+	z-index: 10;
+	border: 1px solid orange;
+
+}*/
 .container,
 .row {
 	/*border: 1px solid orange;*/
@@ -3480,6 +3567,7 @@
 @media (min-width: 992px) {
 	.contact-card__icon-name {
 		margin: 0;
+		padding-left: 0;
 	}
 }
 .contact-card__icon-detail {

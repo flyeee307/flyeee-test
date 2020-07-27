@@ -425,9 +425,16 @@ html,body{
 }
 html{
   font-size: 10px;
+  /*overflow: hidden;
+  height: 100%;*/
 }
 body{
   font-size: 1.4rem;
+  /*perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;*/
 }
 /* heading */
 h1, h2, h3, h4, h5, h6, p{
