@@ -296,7 +296,7 @@ $(document).ready(function(){
 	
     $(".back-top").click(function(e){
     	e.preventDefault();
-        $("html,body").stop().animate({scrollTop:0},500);	
+        $("html,body").stop().animate({scrollTop:0},200, 'swing');	
     });
     
 
@@ -310,8 +310,8 @@ $(document).ready(function(){
 	$('.main-hero__content .btn').click(function (event) {
 		event.preventDefault();
 		$('body,html').animate({
-			scrollTop: $('.about-content').offset().top-30
-		}, 800);
+			scrollTop: $('.works-content').offset().top-10
+		}, 200, 'swing');
 	});
 
 	// 點選nav選單跳到該部位
@@ -320,7 +320,7 @@ $(document).ready(function(){
 		$('.portfolio-content').removeClass('show');
 		$('body,html').animate({
 			scrollTop: 0
-		}, 800);
+		}, 400);
 	});
 
 	$('#about').click(function (event) {
@@ -328,7 +328,7 @@ $(document).ready(function(){
 		$('.portfolio-content').removeClass('show');
 		$('body,html').animate({
 			scrollTop: $('.about-content').offset().top-30
-		}, 800);
+		}, 400);
 	});
 
 	$('#works').click(function (event) {
@@ -336,7 +336,7 @@ $(document).ready(function(){
 		$('.portfolio-content').removeClass('show');
 		$('body,html').animate({
 			scrollTop: $('.works-content').offset().top-40
-		}, 800);
+		}, 400);
 	});
 
 	$('#contact').click(function (event) {
@@ -344,7 +344,7 @@ $(document).ready(function(){
 		$('.portfolio-content').removeClass('show');
 		$('body,html').animate({
 			scrollTop: $('.contact-content').offset().top-40
-		}, 800);
+		}, 400);
 	});
 
 
@@ -356,7 +356,7 @@ $(document).ready(function(){
 		$('.footer').removeClass('z-top');
 		$('body,html').animate({
 			scrollTop: $('.about-content').offset().top-30
-		}, 800);
+		}, 400);
 	});
 
 	$('.popup-skills').click(function (event) {
@@ -366,7 +366,7 @@ $(document).ready(function(){
 		$('.footer').removeClass('z-top');
 		$('body,html').animate({
 			scrollTop: $('.skills-content').offset().top-30
-		}, 800);
+		}, 400);
 	});
 
 	$('.popup-experience').click(function (event) {
@@ -376,7 +376,7 @@ $(document).ready(function(){
 		$('.footer').removeClass('z-top');
 		$('body,html').animate({
 			scrollTop: $('.experience-content').offset().top-30
-		}, 800);
+		}, 400);
 	});
 
 	$('.popup-works').click(function (event) {
@@ -386,7 +386,7 @@ $(document).ready(function(){
 		$('.footer').removeClass('z-top');
 		$('body,html').animate({
 			scrollTop: $('.works-content').offset().top-30
-		}, 800);
+		}, 400);
 	});
 
 	$('.popup-contact').click(function (event) {
@@ -396,7 +396,7 @@ $(document).ready(function(){
 		$('.footer').removeClass('z-top');
 		$('body,html').animate({
 			scrollTop: $('.contact-content').offset().top-30
-		}, 800);
+		}, 400);
 	});
 
 	$('.menu-toggler').click(function(event){
