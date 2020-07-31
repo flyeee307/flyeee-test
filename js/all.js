@@ -19,7 +19,14 @@ $(document).ready(function(){
 
 
 
+
+	// console.log($(window).height());
+	// console.log($(window).innerHeight());
 	
+
+
+
+	// Header 隱藏
 
 	function headerHide() {
 		
@@ -48,6 +55,9 @@ $(document).ready(function(){
 			headerHide();
 		}
 	});
+
+
+
 
 	// 背景的垂直視差滾動
 	// $(window).scroll(function() { 
@@ -301,6 +311,92 @@ $(document).ready(function(){
     
 
 
+    // Bootstrap 滾動監聽
+    $(document).ready(function(){
+	  // Add scrollspy to <body>
+	  $('body').scrollspy({target: ".main-nav", offset: 50});   
+
+	  // Add smooth scrolling on all links inside the navbar
+	  $("#myNavbar a").on('click', function(event) {
+	    // Make sure this.hash has a value before overriding default behavior
+	    if (this.hash !== "") {
+	      // Prevent default anchor click behavior
+	      event.preventDefault();
+
+	      // Store hash
+	      var hash = this.hash;
+
+	      // Using jQuery's animate() method to add smooth page scroll
+	      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	      $('html, body').animate({
+	        scrollTop: $(hash).offset().top
+	      }, 400, function(){
+	   
+	        // Add hash (#) to URL when done scrolling (default click behavior)
+	        // window.location.hash = hash;
+	        // console.log(hash);
+	      });
+	    }  // End if
+	  });
+	});
+
+
+	// 偵測各區的scroll位置
+	console.log($(window).scrollTop());
+
+	$(window).scroll(function(event) {
+		var st = this.scrollY;
+		// var offSet0 = $('html,body').offset().top;
+		var offSet1 = $('.about-content').offset().top;
+		var offSet2 = $('.skills-content').offset().top;
+		var offSet3 = $('.experience-content').offset().top;
+		var offSet4 = $('.works-content').offset().top;
+		var offSet5 = $('.contact-content').offset().top;
+		
+		console.log(st);
+		// console.log(offSet0);
+		console.log(offSet1);
+		console.log(offSet2);
+		console.log(offSet3);
+		console.log(offSet4);
+		console.log(offSet5);
+
+		if (st >= 0) {
+			$('#home').parent().addClass('active').removeClass('unactive').siblings().addClass('unactive').removeClass('active');
+			$('.main-nav__menu-item.active').siblings().find('.main-nav__menu-item-link').addClass('change');
+			$('.main-nav__menu-item.active').find('.main-nav__menu-item-link').removeClass('change');
+			
+			if (st >= offSet1 - 70) {
+				$('#about').parent().addClass('active').removeClass('unactive').siblings().addClass('unactive').removeClass('active');
+				$('.main-nav__menu-item.active').siblings().find('.main-nav__menu-item-link').addClass('change');
+				$('.main-nav__menu-item.active').find('.main-nav__menu-item-link').removeClass('change');
+				
+				if (st >= offSet2 - 70) {
+					$('#skills').parent().addClass('active').removeClass('unactive').siblings().addClass('unactive').removeClass('active');
+					$('.main-nav__menu-item.active').siblings().find('.main-nav__menu-item-link').addClass('change');
+					$('.main-nav__menu-item.active').find('.main-nav__menu-item-link').removeClass('change');
+
+					if (st >= offSet3 - 70) {
+						$('#experience').parent().addClass('active').removeClass('unactive').siblings().addClass('unactive').removeClass('active');
+						$('.main-nav__menu-item.active').siblings().find('.main-nav__menu-item-link').addClass('change');
+						$('.main-nav__menu-item.active').find('.main-nav__menu-item-link').removeClass('change');
+
+						if (st >= offSet4 - 290) {
+							$('#works').parent().addClass('active').removeClass('unactive').siblings().addClass('unactive').removeClass('active');
+							$('.main-nav__menu-item.active').siblings().find('.main-nav__menu-item-link').addClass('change');
+							$('.main-nav__menu-item.active').find('.main-nav__menu-item-link').removeClass('change');
+					
+							if (st >= offSet5 - 500) {
+								$('#contact').parent().addClass('active').removeClass('unactive').siblings().addClass('unactive').removeClass('active');
+								$('.main-nav__menu-item.active').siblings().find('.main-nav__menu-item-link').addClass('change');
+								$('.main-nav__menu-item.active').find('.main-nav__menu-item-link').removeClass('change');
+							}
+						}		
+					}
+				}
+			}
+		}
+	});
 
 
 
@@ -314,38 +410,38 @@ $(document).ready(function(){
 		}, 200, 'swing');
 	});
 
-	// 點選nav選單跳到該部位
-	$('#home').click(function (event) {
-		event.preventDefault();
-		$('.portfolio-content').removeClass('show');
-		$('body,html').animate({
-			scrollTop: 0
-		}, 400);
-	});
+	// // 點選nav選單跳到該部位
+	// $('#home').click(function (event) {
+	// 	event.preventDefault();
+	// 	$('.portfolio-content').removeClass('show');
+	// 	$('body,html').animate({
+	// 		scrollTop: 0
+	// 	}, 400);
+	// });
 
-	$('#about').click(function (event) {
-		event.preventDefault();
-		$('.portfolio-content').removeClass('show');
-		$('body,html').animate({
-			scrollTop: $('.about-content').offset().top-30
-		}, 400);
-	});
+	// $('#about').click(function (event) {
+	// 	event.preventDefault();
+	// 	$('.portfolio-content').removeClass('show');
+	// 	$('body,html').animate({
+	// 		scrollTop: $('.about-content').offset().top-30
+	// 	}, 400);
+	// });
 
-	$('#works').click(function (event) {
-		event.preventDefault();
-		$('.portfolio-content').removeClass('show');
-		$('body,html').animate({
-			scrollTop: $('.works-content').offset().top-40
-		}, 400);
-	});
+	// $('#works').click(function (event) {
+	// 	event.preventDefault();
+	// 	$('.portfolio-content').removeClass('show');
+	// 	$('body,html').animate({
+	// 		scrollTop: $('.works-content').offset().top-40
+	// 	}, 400);
+	// });
 
-	$('#contact').click(function (event) {
-		event.preventDefault();
-		$('.portfolio-content').removeClass('show');
-		$('body,html').animate({
-			scrollTop: $('.contact-content').offset().top-40
-		}, 400);
-	});
+	// $('#contact').click(function (event) {
+	// 	event.preventDefault();
+	// 	$('.portfolio-content').removeClass('show');
+	// 	$('body,html').animate({
+	// 		scrollTop: $('.contact-content').offset().top-40
+	// 	}, 400);
+	// });
 
 
 	// 點選popup-menu__item跳到該部位
@@ -411,6 +507,7 @@ $(document).ready(function(){
 
 
 
+
 	// 點選 更多作品 展開作品集
 	$('.works-group .btn').click(function(event) {
 		event.preventDefault();
@@ -421,6 +518,20 @@ $(document).ready(function(){
 		// $('.footer').addClass('z-top');
 		// $('.footer__logo').hide(100);
 	});
+
+
+
+
+	// 點選skills-toggle展開skills文字
+	$('.skills-toggle').on('click', function() {
+		$(this).toggleClass('change');
+		$(this).parent().toggleClass('change');
+		$(this).parent().find('.card-text__description,.card-text__tool').slideToggle(200);
+	});
+
+
+
+	
 
 
 
@@ -440,8 +551,16 @@ $(document).ready(function(){
 	            items:1,
 	            nav:true
 	        },
-	        600:{
+	        768:{
 	            items:3,
+	            nav:true
+	        },
+	        800:{
+	            items:2,
+	            nav:true
+	        },
+	        896:{
+	            items:1,
 	            nav:true
 	        },
 	        1000:{

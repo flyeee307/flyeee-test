@@ -51,15 +51,26 @@
 		<header class="main-header">
 			<div class="container">
 				<div class="row">
-					<nav class="main-nav">
+					<nav class="main-nav" id="myNavbar">
 						<div class="main-nav__logo">
-							<img src="images/logo/Flyeee-logo-flat.svg" alt="Flyeee" title="Flyeee Yang’s Portfolio">	
+							<a id="home" href="#section0"><img src="images/logo/Flyeee-logo-flat.svg" alt="Flyeee" title="Flyeee Yang’s Portfolio"></a>	
 						</div>
 						<ul class="main-nav__menu">
-							<li class="main-nav__menu-item"><a id="home" class="main-nav__menu-item-link" href="#">HOME</a></li>
-							<li class="main-nav__menu-item"><a id="about" href="#" class="main-nav__menu-item-link">ABOUT</a></li>
-							<li class="main-nav__menu-item"><a id="works" href="#" class="main-nav__menu-item-link">WORKS</a></li>
-							<li class="main-nav__menu-item"><a id="contact" href="#" class="main-nav__menu-item-link">CONTACT</a></li>
+							<li class="main-nav__menu-item unactive">
+								<a id="about" href="#section1" class="main-nav__menu-item-link">ABOUT</a>
+							</li>
+							<li class="main-nav__menu-item active">
+								<a id="skills" class="main-nav__menu-item-link" href="#section2">SKILLS</a>
+							</li>
+							<li class="main-nav__menu-item active">
+								<a id="experience" class="main-nav__menu-item-link" href="#section3">EXPERIENCE</a>
+							</li>
+							<li class="main-nav__menu-item unactive">
+								<a id="works" href="#section4" class="main-nav__menu-item-link">WORKS</a>
+							</li>
+							<li class="main-nav__menu-item unactive">
+								<a id="contact" href="#section5" class="main-nav__menu-item-link">CONTACT</a>
+							</li>
 						</ul>
 						<a href="#popup-overlay" class="menu-toggler">
 							<span></span>
@@ -98,10 +109,10 @@
 			<div class="shape-rect--lg" data-stellar-ratio="1.2"
      data-stellar-vertical-offset="-60"></div>
 			<!-- Hero -->
-			<div class="main-hero">
+			<div class="main-hero" id="section0">
 				<div class="multi-bg">
 					<div class="multi-bg__inner">
-						<div class="color-mask" data-stellar-background-ratio="0.9" data-stellar-horizontal-offset="120" data-stellar-vertical-offset="100">
+						<div class="color-mask">
 							<div class="dot-bg"></div>
 						</div>
 					</div>
@@ -139,7 +150,7 @@
 			<!-- End Hero -->
 
 			<!-- About -->
-			<div class="about-content">
+			<div class="about-content" id="section1">
 				<div class="shape-rect--md2" data-stellar-ratio="1.4" data-stellar-horizontal-offset="0" data-stellar-vertical-offset="-300"></div>
 				<div class="container">
 					<div class="row justify-content-center">
@@ -157,10 +168,10 @@
 									並在藝文和行銷公關產業累積了近8年的豐富平面設計經驗。
 									</p>
 									<p>
-										高度自我要求的細膩多元設計功力，樂於分享交流不藏私的個性，搭載高度的理解力與同理心，使我能獨立作業，也能跨領域團隊合作。
+										我對自我的要求度高，有著細膩多元設計功力，樂於分享交流不藏私的個性，搭載高度的理解力與同理心，使我能獨立作業，也能跨領域團隊合作。
 									</p>
 									<p>
-										在工作之外，我總是熱衷投資於提升自我設計能力，透過自學研究UI設計、網頁開發技術、插畫繪圖、動畫製作、影音剪輯等，適時將所學的新技能運用於不同的工作專案上，同時積極拓展自身對於使用者體驗、品牌與行銷方面的知識和觀念。
+										在工作之外，我總是熱衷投資於提升自我設計能力，透過自學研究UI設計、網頁開發技術、插畫繪圖、動畫製作、影音剪輯等，適時將所學的新技能運用於不同的工作專案上，同時也積極拓展自身對於使用者體驗、品牌與行銷方面的知識和觀念。
 									</p>
 									<p>
 										在這高速變化的時代，期許自己像一塊海綿一樣，不斷放下過往所學來吸收新知，持續精進多元的設計技能，朝向技術與時俱進的全端設計師邁進。
@@ -175,7 +186,7 @@
 			<!-- End About -->
 			
 			<!-- Skills -->
-			<div class="skills-content">
+			<div class="skills-content" id="section2">
 				<div class="container">
 					<div class="skills__text">
 						<h1 class="title text-sm-center color--primary">SKILLS</h1>
@@ -184,6 +195,7 @@
 					<div class="row skills-group justify-content-center">
 						<div class="col-12 col-sm-10 col-md-6 col-xl-5">
 							<div class="skills-card wow animate__slideInUp">
+								<div class="skills-toggle"></div>
 								<div class="row align-items-center">
 									<div class="skills-iconBox col-lg-3 col-12">
 										<div class="skills-icon">
@@ -216,6 +228,7 @@
 						</div>
 						<div class="col-12 col-sm-10 col-md-6 col-xl-5">
 							<div class="skills-card wow animate__slideInUp">
+								<div class="skills-toggle"></div>
 								<div class="row align-items-center">
 									<div class="skills-iconBox col-lg-3 col-12">
 										<div class="skills-icon">
@@ -236,7 +249,7 @@
 													<p class="card-text__tool-title color--white">擅長工具：</p>
 												</div>
 												<div class="col-sm-12 col-12">
-													<p class="card-text__tool-name color--secondary">Sketch、Adobe XD、Zeplin、InVision。</p>
+													<p class="card-text__tool-name color--secondary">Sketch、Adobe XD、InVision。</p>
 												</div>
 											</div>
 					
@@ -248,6 +261,7 @@
 						</div>
 						<div class="col-12 col-sm-10 col-md-6 col-xl-5">
 							<div class="skills-card wow animate__slideInUp">
+								<div class="skills-toggle"></div>
 								<div class="row align-items-center">
 									<div class="skills-iconBox col-lg-3 col-12">
 										<div class="skills-icon">
@@ -280,6 +294,7 @@
 						</div>
 						<div class="col-12 col-sm-10 col-md-6 col-xl-5">
 							<div class="skills-card wow animate__slideInUp">
+								<div class="skills-toggle"></div>
 								<div class="row align-items-center">
 									<div class="skills-iconBox col-lg-3 col-12">
 										<div class="skills-icon">
@@ -317,7 +332,7 @@
 			<!-- End Skills -->
 			
 			<!-- Experience -->
-			<div class="experience-content">
+			<div class="experience-content" id="section3">
 				<div class="shape-triangle--bottom"></div>
 				<div class="shape-triangle--top"></div>
 				<div class="container">
@@ -330,7 +345,22 @@
 							</div>
 						</div>
 					</div>
-					<div class="experience-group">
+					<div class="experience-group timeline">
+						<div class="row justify-content-around u-mb-50">
+							<div class="col-lg-3">
+								<div class="experience__item">
+									<h4 class="experience__item-subtitle color--secondary"><span class="year color--primary">2019 - 2020</span><br>網頁程式與UI設計領域<!-- <span class="com-sub"></span> --></h4>
+									<h3 class="experience__item-title color--darkgray">全時間投入自學者</h3>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="experience-description">
+									<p>
+										為了專注學習網頁與UI設計領域，揮別了前一份投入近6年的公司，成了全時間投入的自學者。我充分利用豐富的網路與圖書資源，從許多不同的網路教學與論壇學習如何從無到有架構網站。透過大量撰寫網頁語法，不斷地從錯誤中學習更好更有效率的程式寫法，這個網站的順利誕生，要歸功於認真學習的自己。
+									</p>
+								</div>
+							</div>
+						</div>
 						<div class="row justify-content-around u-mb-50">
 							<div class="col-lg-3">
 								<div class="experience__item">
@@ -338,7 +368,7 @@
 									<h3 class="experience__item-title color--darkgray">資深設計師</h3>
 								</div>
 							</div>
-							<div class="timeline col-lg-6">
+							<div class="col-lg-6">
 								<div class="experience-description">
 									<p>
 										針對不同專案設計活動logo、主視覺、海報、DM、燈箱、banner、網頁、影片等各式宣傳品，常須獨力完成大型專案設計。由於本身對於動畫的興趣與研究，當與其他設計師合作專案時，常有機會負責動畫的製作，透過影音為視覺圖像增添更豐富的層次。充分發揮我的影像合成、插畫繪製、商業攝影與廣告動畫製作能力。
@@ -356,7 +386,7 @@
 							<div class="col-lg-6">
 								<div class="experience-description">
 									<p>
-										從事設計工作之後，深感設計學問的博大精深，驅使我想進一步探究更多關於設計的原理：各種設計風格是如何演變至今、成功的設計之所以有效的原因等，便進入了商業設計研究所。除了研究所的課程，我也積極旁聽實作多門大學部課程，並承接校務單位的設計專案，讓自己理論與實務並進。
+										從事設計工作之後，深感設計學問的博大精深，驅使我想進一步探究更多關於設計的原理：各種設計風格是如何演變至今、成功的設計之所以有效的原因等，便進入了商業設計研究所學習。除了在研究所課程中擴展學識的豐富度之外，也積極旁聽實作多門大學部課程，並承接校務單位的設計專案，讓自己理論與實務並進。
 									</p>
 								</div>
 							</div>
@@ -371,7 +401,7 @@
 							<div class="col-lg-6">
 								<div class="experience-description">
 									<p>
-										工作內容包括：文化創意商品規劃設計、展覽活動的展示物與文宣品設計、文物包裝設計、文物標籤設計、兼任攝影助理。作為公司唯一的設計師，面對大量的設計項目，能夠精準掌握設計時程，也開始懂得利用各種軟體的批次處理等自動化工具來增進效率，確實做到「Don’t Repeat Yourself」。
+										工作內容包括：文化創意商品規劃設計、展覽活動的展示物與文宣品設計、文物包裝設計、文物標籤設計、兼任攝影助理。作為公司唯一的設計師，面對大量的設計項目，能夠精準掌握設計時程，也開始懂得利用各種軟體的批次處理等自動化工具來增進效率，確實做到<span>「Don’t Repeat Yourself」</span>。
 									</p>
 								</div>
 							</div>
@@ -389,7 +419,7 @@
 			<!-- End Experience -->
 
 			<!-- Works -->
-			<div class="works-content">
+			<div class="works-content" id="section4">
 				<div class="shape-triangle--bottom"></div>
 				<div class="shape-triangle--top"></div>
 				<div class="experience__timeline"></div>
@@ -453,7 +483,7 @@
 								</div>
 							</div>
 						</div> -->
-						<div class="row justify-content-center  u-pt-16">
+						<div class="row u-pt-32">
 							<a href="works.html" class="btn btn--primary btn--lg">更多作品<div class="btn--icon-arrow"></div></a>
 						</div>
 					</div>
@@ -463,7 +493,7 @@
 			<!-- End Works -->
 
 			<!-- Contact -->
-			<div class="contact-content">
+			<div class="contact-content" id="section5">
 				<div class="container">
 					
 					<div class="row">
@@ -656,11 +686,13 @@
 	<!-- <script src="js/plugin/jquery/jquery-migrate-1.4.1.min.js"></script> -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<!-- <script src="js/plugin/Scrolling Parallax Plugin for jQuery/jquery.scrolling-parallax.js"></script> -->
+	<script src="js/plugin/bootstrap/bootstrap.min.js"></script>
 	<!-- <script src="js/plugin/stellar/jquery.stellar.min.js"></script> -->
 	<!-- <script src="js/plugin/jquery_mobile/jquery.mobile-1.4.5.min.js"></script> -->
 
 	<script src="js/plugin/OwlCarousel/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/plugin/TouchSwipe/jquery.touchSwipe.min.js"></script>
+
 	
 	<!-- <script src="js/plugin/wow/wow.js"></script> -->
 
