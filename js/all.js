@@ -549,24 +549,28 @@ $(document).ready(function(){
 	    responsive:{
 	        0:{
 	            items:1,
+	            slideBy:1,
 	            nav:true
 	        },
 	        768:{
 	            items:3,
+	            slideBy:3,
 	            nav:true
 	        },
 	        800:{
 	            items:2,
+	            slideBy:2,
 	            nav:true
 	        },
 	        896:{
 	            items:1,
+	            slideBy:1,
 	            nav:true
 	        },
 	        1000:{
-	            items:4,
-	            nav:true,
-	            loop:false
+	            items:3,
+	            slideBy:3,
+	            nav:true
 	        }
 	    }
 	});
