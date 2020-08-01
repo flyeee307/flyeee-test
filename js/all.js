@@ -495,15 +495,53 @@ $(document).ready(function(){
 		}, 400);
 	});
 
-	$('.menu-toggler').click(function(event){
-		event.preventDefault();
-		$('.popup-menu').addClass('show');
-	});
 
-	$('.popup-menu--close').click(function(event){
-		event.preventDefault();
-		$('.popup-menu').removeClass('show');
-	});
+
+	
+
+	// $('.menu-toggler').click(function(event){
+	// 	event.preventDefault();
+	// 	$('.popup-menu').addClass('show');
+	// });
+
+	// $('.popup-menu--close').click(function(event){
+	// 	event.preventDefault();
+	// 	$('.popup-menu').removeClass('show');
+	// });
+
+
+
+
+
+
+
+	$(".menu-toggler").click(function(event){
+        var e=window.event || event;
+        if(e.stopPropagation){
+            e.stopPropagation();
+        }else{
+            e.cancelBubble = true;
+        }   
+        $('.popup-menu').addClass('show');
+    });
+    $(".menu-toggler").click(function(event){
+        var e=window.event || event;
+        if(e.stopPropagation){
+            e.stopPropagation();
+        }else{
+            e.cancelBubble = true;
+        }
+    });
+    document.onclick = function(){
+        $('.popup-menu').removeClass('show');
+    };
+
+
+
+
+
+
+	
 
 
 
