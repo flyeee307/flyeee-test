@@ -729,6 +729,11 @@
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
 	background: #00EBE2;
 }
+.owl-carousel .owl-item img.owl-lazy {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
 
 /*---------------------------*/
@@ -3981,7 +3986,7 @@
 }
 .works__imgbox {
 	width: 100%;
-	height: 100%;
+	height: 290px;
 	/*border: 3px solid #00EBE2;*/
 	/*border-radius: 12px;
 	-moz-border-radius: 12px;
@@ -3989,6 +3994,51 @@
 	-o-border-radius: 12px;
 	-ms-border-radius: 12px;
 	overflow: hidden;*/
+}
+@media (min-width: 360px) {
+	.works__imgbox {
+		height: 330px;
+	}
+}
+@media (min-width: 375px) {
+	.works__imgbox {
+		height: 360px;
+	}
+}
+@media (min-width: 411px) {
+	.works__imgbox {
+		height: 390px;
+	}
+}
+@media (min-width: 568px) {
+	.works__imgbox {
+		height: 230px;
+	}
+}
+@media (min-width: 640px) {
+	.works__imgbox {
+		height: 270px;
+	}
+}
+@media (min-width: 768px) and (orientation: landscape) {
+	.works__imgbox {
+		height: 290px;
+	}
+}
+@media (min-width: 1024px) {
+	.works__imgbox {
+		height: 370px;
+	}
+}
+@media (min-width: 1280px) {
+	.works__imgbox {
+		height: 450px;
+	}
+}
+@media (min-width: 1920px) {
+	.works__imgbox {
+		height: 580px;
+	}
 }
 .works__imgbox img {
 	width: 100%;

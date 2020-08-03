@@ -497,7 +497,7 @@ $(document).ready(function(){
 
 
 
-	
+
 
 	// $('.menu-toggler').click(function(event){
 	// 	event.preventDefault();
@@ -596,8 +596,8 @@ $(document).ready(function(){
 	            nav:true
 	        },
 	        800:{
-	            items:2,
-	            slideBy:2,
+	            items:1,
+	            slideBy:1,
 	            nav:true
 	        },
 	        896:{
