@@ -65,9 +65,6 @@ mixpanel.init("c8af4b6de0579468f87dbdfa1abf9ca9", {batch_requests: true})</scrip
 </head>
 <body>
 	<div class="wrapper">
-		<!-- Bg -->
-		<!-- <div class="bg"></div> -->
-		<!-- End Bg -->
 		<!-- Header -->
 		<header class="main-header">
 			<div class="container">
@@ -748,7 +745,7 @@ mixpanel.init("c8af4b6de0579468f87dbdfa1abf9ca9", {batch_requests: true})</scrip
 		    var addcart = document.querySelector('.main-hero__content .btn');
 		    addcart.addEventListener('click',function(e){
 		      e.preventDefault();
-		      mixpanel.track("seemore");
+		      mixpanel.track("addcart");
 		      // alert('偵測到點擊事件');
 		    }); 
 		  
