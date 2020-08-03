@@ -579,7 +579,7 @@ $(document).ready(function(){
 	$('.owl-carousel').owlCarousel({
 		lazyLoad:true,
 		autoplay:true,
-		autoplayTimeout:3000,
+		autoplayTimeout:4000,
 		autoplayHoverPause:true,
 	    loop:true,
 	    margin:10,
@@ -590,14 +590,16 @@ $(document).ready(function(){
 	            slideBy:1,
 	            nav:true
 	        },
-	        768:{
+	        640:{
 	            items:3,
-	            slideBy:3,
+	            slideBy:1,
+	            autoplayTimeout:2000,
 	            nav:true
 	        },
 	        800:{
-	            items:1,
+	            items:3,
 	            slideBy:1,
+	            autoplayTimeout:2000,
 	            nav:true
 	        },
 	        896:{
@@ -608,6 +610,7 @@ $(document).ready(function(){
 	        1000:{
 	            items:3,
 	            slideBy:3,
+	            autoplayTimeout:4000,
 	            nav:true
 	        }
 	    }
@@ -799,6 +802,30 @@ $(document).ready(function(){
 	            current.height = current.height / pixelRatio;
 	        }
 	    }
+	});
+
+	// $('[data-fancybox="c-img"]').fancybox({
+	//     afterLoad : function(instance, current) {
+	//         var pixelRatio = window.devicePixelRatio || 1;
+
+	//         if ( pixelRatio > 1.5 ) {
+	//             current.width  = current.width  / pixelRatio;
+	//             current.height = current.height / pixelRatio;
+	//         }
+	//     }
+	// });
+
+	$('[data-fancybox="c-img"]').fancybox({
+	  selector : '.owl-item:not(.cloned) a',
+	  hash   : false,
+	  thumbs : {
+	    autoStart : true
+	  },
+	  buttons : [
+	    'zoom',
+	    'download',
+	    'close'
+	  ]
 	});
 
 	$('[data-fancybox]').fancybox({
