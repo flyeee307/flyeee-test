@@ -730,12 +730,14 @@ mixpanel.init("c6cd90349b5ec4a67ecd67476c7be25c", {batch_requests: true})</scrip
 	<script>
 		mixpanel.track("pageview");
 
+		mixpanel.people.set({ "$name": name, "$email": email });
+
 window.addEventListener("load", function(event) {
     var addcart = document.querySelector('.main-hero__content .btn');
     addcart.addEventListener('click',function(e){
       e.preventDefault();
-      mixpanel.track("addcart");
-      alert('偵測到點擊事件');
+      mixpanel.track("seeMore");
+      // alert('偵測到點擊事件');
     }); 
   
  }); 
