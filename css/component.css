@@ -2071,12 +2071,6 @@
 		background-attachment: fixed;
 	}
 }
-@media (min-width: 1200px) {
-	.dot-bg {
-		-webkit-background-size: 15px;
-		background-size: 15px;
-	}
-}
 /*.shape-mask {
 	bottom: 0;
 	left: 0;
@@ -2664,6 +2658,12 @@
 		top: 84%;
 		left: -116%;
 		width: 268px;
+	}
+}
+@media (min-width: 1024px) {
+	.main-hero__title-third:before {
+		left: -98%;
+		width: 248px;
 	}
 }
 @media (min-width: 1200px) {
@@ -3372,26 +3372,26 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	   -moz-transform: translate(-50%,-50%);
-	    -ms-transform: translate(-50%,-50%);
-		 -o-transform: translate(-50%,-50%);
-	        transform: translate(-50%,-50%);
-	/*width: 100%;
-	height: 100%;*/
-	/*background-color: #fff;*/
+	-webkit-transform: translate(-50%,-40%);
+	   -moz-transform: translate(-50%,-40%);
+	    -ms-transform: translate(-50%,-40%);
+		 -o-transform: translate(-50%,-40%);
+	        transform: translate(-50%,-40%);
 	z-index: 1;
 }
 @media (min-width: 992px) {
 	.skills-icon__img-icon {
-		-webkit-transform: translate(-50%,-53%);
-		   -moz-transform: translate(-50%,-53%);
-		    -ms-transform: translate(-50%,-53%);
-			 -o-transform: translate(-50%,-53%);
-		        transform: translate(-50%,-53%);
+		-webkit-transform: translate(-50%,-50%);
+		   -moz-transform: translate(-50%,-50%);
+		    -ms-transform: translate(-50%,-50%);
+			 -o-transform: translate(-50%,-50%);
+		        transform: translate(-50%,-50%);
 	}
 }
 .skills-icon__img-icon img {
+	width: 100%;
+}
+.skills-card.paint .skills-icon__img-icon img {
 	width: 90%;
 }
 .card-text {
