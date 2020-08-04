@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174169822-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-174169822-1');
+	</script>
+
 	<meta charset="UTF-8">
 	<!--讓IE使用最新的渲染模式-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,11 +31,16 @@
 	
 	<!-- <link rel="stylesheet" href="css/plugin/jquery_mobile/jquery.mobile-1.4.5.min.css"> -->
 
-	<link rel="stylesheet" href="js/plugin/OwlCarousel/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="js/plugin/OwlCarousel/assets/owl.theme.default.min.css">
+	
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/layout.css">
+
+	<link rel="stylesheet" href="js/plugin/OwlCarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="js/plugin/OwlCarousel/assets/owl.theme.default.min.css">
+
 	<link rel="stylesheet" href="css/component.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 	<link rel="stylesheet" href="css/plugin/animate/animate.css">
 	<link rel="stylesheet" href="css/plugin/fancybox-master/jquery.fancybox.min.css">
@@ -41,49 +56,26 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script src="https://kit.fontawesome.com/25f3b20fbc.js" crossorigin="anonymous"></script>
+
+	<script>(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("c8af4b6de0579468f87dbdfa1abf9ca9", {batch_requests: true})</script>
 </head>
 <body>
 	<div class="wrapper">
-		<!-- Bg -->
-		<!-- <div class="bg"></div> -->
-		<!-- End Bg -->
 		<!-- Header -->
 		<header class="main-header">
 			<div class="container">
 				<div class="row">
-					<nav class="main-nav">
+					<nav class="main-nav" id="myNavbar">
 						<div class="main-nav__logo">
-							<img src="images/logo/Flyeee-logo-flat.svg" alt="Flyeee" title="Flyeee Yang’s Portfolio">	
+							<a id="home" href="index.html"><img src="images/logo/Flyeee-logo-flat.svg" alt="Flyeee" title="Flyeee Yang’s Portfolio"></a>	
 						</div>
-						<ul class="main-nav__menu">
-							<li class="main-nav__menu-item"><a id="home" class="main-nav__menu-item-link" href="#">HOME</a></li>
-							<li class="main-nav__menu-item"><a id="about" href="#" class="main-nav__menu-item-link">ABOUT</a></li>
-							<li class="main-nav__menu-item"><a id="works" href="#" class="main-nav__menu-item-link">WORKS</a></li>
-							<li class="main-nav__menu-item"><a id="contact" href="#" class="main-nav__menu-item-link">CONTACT</a></li>
-						</ul>
-						<a href="#popup-overlay" class="menu-toggler">
-							<span></span>
-							<span></span>
-							<span></span>
+						<a class="back-home" href="index.html">
+							<i class="fas fa-home"></i>
 						</a>
-						<div id="popup-overlay" class="popup-menu">
-							<div class="u-clearfix">
-								<a href="#" class="popup-menu--close">
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-							<div class="container">
-								<ul>
-									<li class="popup-about"><a href="#" class="popup-menu__item">ABOUT</a></li>
-									<li class="popup-skills"><a href="#" class="popup-menu__item">SKILLS</a></li>
-									<li class="popup-experience"><a href="#" class="popup-menu__item">EXPERIENCE</a></li>
-									<li class="popup-works"><a href="#" class="popup-menu__item">WORKS</a></li>
-									<li class="popup-contact"><a href="#" class="popup-menu__item">CONTACT</a></li>
-								</ul>
-							</div>
-							
-						</div>
 					</nav>
 				</div>
 			</div>
@@ -92,14 +84,7 @@
 		<!-- End Header -->
 		
 		<!-- Main -->
-
-
-
-
-
-
-
-
+		<section class="main-content">
 
 
 
@@ -111,28 +96,28 @@
 				<div class="container">
 					<!-- Isotope - imagesLoaded progress -->
 					<div class="row button-group filter-button-group">
-						<div class="col-4">
+						<div class="col-4 col-sm-3 col-md text-center">
 							<button class="btn is-active" data-filter="*">全部</button>
 						</div>
-						<div class="col-4">
+						<div class="col-4 col-sm-3 col-md text-center">
 							<button class="btn" data-filter=".ui">UI</button>
 						</div>
-						<div class="col-4">
+						<div class="col-4 col-sm-3 col-md text-center">
 							<button class="btn" data-filter=".web">網頁</button>
 						</div>
-						<div class="col-4">
+						<div class="col-4 col-sm-3 col-md text-center">
 							<button class="btn" data-filter=".gd">平面設計</button>
 						</div>
-						<div class="col-4">
+						<div class="col-4 col-sm-3 col-md text-center">
 							<button class="btn" data-filter=".ic">影像合成</button>
 						</div>
-						<div class="col-4">
+						<div class="col-4 col-sm-3 col-md text-center">
 							<button class="btn" data-filter=".cam">攝影</button>
 						</div>
-						<div class="col-4">
+						<div class="col-4 col-sm-3 col-md text-center">
 							<button class="btn" data-filter=".dp">電腦繪圖</button>
 						</div>
-						<div class="col-4">
+						<div class="col-4 col-sm-3 col-md text-center">
 							<button class="btn" data-filter=".lg">LOGO</button>
 						</div>
 					</div>
@@ -398,23 +383,6 @@
 
 
 
-
-
-
-
-				
-
-
-
-
-
-
-				<div class="gallery__btn-group">
-					<div class="btn first">first</div>
-					<div class="btn prev">prev</div>
-					<div class="btn next">next</div>
-					<div class="btn last">last</div>
-				</div>
 
 				<!-- 正方形縮圖排版 -->
 				<div class="bbox">
@@ -772,23 +740,33 @@
 					</div>
 				</div>
 
+				<!-- 頁面切換按鈕 -->
+				<div class="gallery__btn-group">
+					<div class="btn first">最前</div>
+					<div class="btn prev">往前</div>
+					<div class="btn next">往後</div>
+					<div class="btn last">最後</div>
+				</div>
+
 				<!-- /Isotope 圖片篩選插件 -->	
 			</div>
 
 			<!-- End Portfolio -->
+		</section>
 		<!-- End Main -->
 
 		<!-- Footer -->
-		<footer class="footer fixed-bottom bg-color--gray">
+		<footer class="footer bg-color--gray">
 			<div class="container">
 				<div class="row footer-content justify-content-center align-items-center">
 					<div class="footer__logo">
 						<img src="images/logo/Flyeee-logo-flat.svg" alt="Flyeee" title="Flyeee Yang’s Portfolio">	
 					</div>
-					<p class="copyright color--darkgray">Copyrights © 2020  Designed & Developed by <span>Flyeee Yang</span></p>
+					<p class="copyright color--black">Copyrights © 2020  Designed & Developed by <span>Flyeee Yang</span></p>
 				</div>
 			</div>
 		</footer>
+		<!-- End Footer -->
 		<!-- End Footer -->
 		<!-- Go Top -->
 		<a href="#" class="back-top"></a>

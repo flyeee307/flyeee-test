@@ -635,7 +635,7 @@ $(document).ready(function(){
 
 	$('.button-group .btn').click(function() {
 		$(this).addClass('is-active');
-		$(this).siblings().removeClass('is-active');
+		$(this).parent().siblings().find('.btn').removeClass('is-active');
 
 	});
 
@@ -723,7 +723,7 @@ $(document).ready(function(){
 	// RWD顯示設定
 
 	function windowSize() {
-	    if ($(window).width() < 576) {
+	    if ($(window).width() <= 736 || ($(window).width() >= 812 && $(window).width() <= 896)) {
 	        $('.jq-sqare-grid').show();
 	        $('.jq-grid').hide();
 	        // 正方形縮圖排版
@@ -734,8 +734,8 @@ $(document).ready(function(){
 			    // columnWidth: '.sqare-grid-item',
 			 //    rowHeight: 100,
 				// gutter: 10,
-				rowHeight: 80,
-				gutter: 10
+				rowHeight: 100,
+				gutter: 30
 			  }
 			});
 
