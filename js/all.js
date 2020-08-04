@@ -575,13 +575,13 @@ $(document).ready(function(){
 
 	
 	// 圖片輪播初始化
-
-	$('.owl-carousel').owlCarousel({
+	var owl = $('.owl-carousel');
+	owl.owlCarousel({
 		lazyLoad:true,
-		autoplay:true,
+		autoplay:false,
 		autoplayTimeout:4000,
 		autoplayHoverPause:true,
-	    loop:true,
+	    loop:false,
 	    margin:10,
 	    responsiveClass:true,
 	    responsive:{
@@ -615,7 +615,20 @@ $(document).ready(function(){
 	        }
 	    }
 	});
+
 	
+
+	$(window).scroll(function(event) {
+		var st = this.scrollY;
+		var offSetW = $('.works-content').offset().top;
+		console.log(st);
+		console.log(offSetW);
+		if (st >= offSetW - 150){
+			owl.trigger('play.owl.autoplay',[4000]);
+		}
+	});	
+	
+
 
 
 	
@@ -723,7 +736,7 @@ $(document).ready(function(){
 	// RWD顯示設定
 
 	function windowSize() {
-	    if ($(window).width() <= 736 || ($(window).width() >= 812 && $(window).width() <= 896)) {
+	    if ($(window).width() <= 736 || ($(window).width() >= 800 && $(window).width() <= 896)) {
 	        $('.jq-sqare-grid').show();
 	        $('.jq-grid').hide();
 	        // 正方形縮圖排版

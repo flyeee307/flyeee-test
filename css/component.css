@@ -4527,6 +4527,11 @@
 		min-height: initial;
 	}
 } 
+@media (min-width: 414px) and (min-height: 896px) {
+	.portfolio-content-test {
+		min-height: 824px;
+	}
+} 
 @media (min-width: 736px) {
 	.portfolio-content-test {
 		min-height: initial;
