@@ -739,6 +739,19 @@ $(document).ready(function(){
 			  $gridS.isotope('layout');
 			});
 
+			// // init Isotope after all images have loaded
+			// var $gridS = $('.jq-sqare-grid').imagesLoaded( function() {
+			//   $gridS.isotope({
+			//     itemSelector: '.sqare-grid-item',
+			//     // percentPosition: true,
+			//     layoutMode: 'masonryHorizontal',
+			// 	masonryHorizontal: {
+			// 		rowHeight: 100,
+			// 		gutter: 30
+			//     }
+			//   });
+			// });
+
 			// filter items on button click
 			$('.filter-button-group').on( 'click', 'button', function() {
 			  var filterValue = $(this).attr('data-filter');
@@ -747,21 +760,42 @@ $(document).ready(function(){
 	    } else {
 	        $('.jq-sqare-grid').hide();
 	        $('.jq-grid').show();
-	        // init Isotope
-			var $gridL = $('.jq-grid').isotope({
-			  // options
-			  itemSelector: '.grid-item',
-			  layoutMode: 'masonry',
-			  percentPosition: true,
-			  // layout mode options
-			  masonry: {
-			    columnWidth: '.grid-sizer'
-			  }
+	  //       // init Isotope
+			// var $gridL = $('.jq-grid').isotope({
+			//   // options
+			//   itemSelector: '.grid-item',
+			//   layoutMode: 'masonry',
+			//   percentPosition: true,
+			//   // layout mode options
+			//   masonry: {
+			//     columnWidth: '.grid-sizer'
+			//   }
+			// });
+			// // layout Isotope after each image loads
+			// $gridL.imagesLoaded().progress( function() {
+			//   $gridL.isotope('layout');
+			// });
+
+
+
+
+			// init Isotope after all images have loaded
+			var $gridL = $('.jq-grid').imagesLoaded( function() {
+			  $gridL.isotope({
+			    itemSelector: '.grid-item',
+			    layoutMode: 'masonry',
+					percentPosition: true,
+					// layout mode options
+					masonry: {
+					columnWidth: '.grid-sizer'
+				}
+			  });
 			});
-			// layout Isotope after each image loads
-			$gridL.imagesLoaded().progress( function() {
-			  $gridL.isotope('layout');
-			});
+
+
+
+
+
 			// filter items on button click
 			$('.filter-button-group').on( 'click', 'button', function() {
 			  var filterValue = $(this).attr('data-filter');
