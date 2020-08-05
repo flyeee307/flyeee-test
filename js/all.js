@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 
-
 	// UI Scroll 上下捲動，控制 Header 的消失與顯示
 	// var lastScrollY = 0;
 
@@ -251,21 +250,6 @@ $(document).ready(function(){
 
 
 	
-	
-
-	
-	
-
-
-	
-
-	
-	
-	
-	
-
-
-	
 
 	/*go top*/
 	// // hide #back-top first
@@ -407,7 +391,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$('body,html').animate({
 			scrollTop: $('.works-content').offset().top-10
-		}, 200, 'swing');
+		}, 800, 'swing');
 	});
 
 	// // 點選nav選單跳到該部位
@@ -539,13 +523,6 @@ $(document).ready(function(){
 
 
 
-
-
-	
-
-
-
-
 	// 點選 更多作品 展開作品集
 	$('.works-group .btn').click(function(event) {
 		event.preventDefault();
@@ -629,7 +606,8 @@ $(document).ready(function(){
 	});	
 	
 
-
+	// lazyload
+	// $('.grid-item .lazyload').lazyload();
 
 	
 
@@ -715,20 +693,19 @@ $(document).ready(function(){
 
 	$('.btn.prev').click(function() {
 		$('.jq-sqare-grid').animate({
-			scrollLeft: $('.jq-sqare-grid').scrollLeft()-330
+			scrollLeft: '-=390'
 		}, 200, 'swing');
 	});
 
 	$('.btn.next').click(function() {
 		$('.jq-sqare-grid').animate({
-			scrollLeft: $('.jq-sqare-grid').scrollLeft()+330
+			scrollLeft: '+=390'
 		}, 200, 'swing');
 	});
 
 	$('.btn.last').click(function() {
 		$('.jq-sqare-grid').animate({
-			// scrollLeft: $('.jq-sqare-grid').scrollLeft()+2380
-			scrollLeft: 1980
+			scrollLeft: 2500
 		}, 200, 'swing');
 	});
 	
@@ -800,10 +777,19 @@ $(document).ready(function(){
 
 
 	// fancybox 設定
-	$('[data-fancybox="gallery"]').fancybox({
+	$('[data-fancybox="m-gallery"]').fancybox({
 		thumbs : {
-			autoStart : true
-		}
+			autoStart : false
+		},
+		// buttons: [
+		// 	"zoom",
+		// 	"share",
+		// 	"slideShow",
+		// 	"fullScreen",
+		// 	"download",
+		// 	"thumbs",
+		// 	"close"
+		// ]
 	});
 
 	$('[data-fancybox="images"]').fancybox({
@@ -817,32 +803,28 @@ $(document).ready(function(){
 	    }
 	});
 
-	// $('[data-fancybox="c-img"]').fancybox({
-	//     afterLoad : function(instance, current) {
-	//         var pixelRatio = window.devicePixelRatio || 1;
-
-	//         if ( pixelRatio > 1.5 ) {
-	//             current.width  = current.width  / pixelRatio;
-	//             current.height = current.height / pixelRatio;
-	//         }
-	//     }
-	// });
+	
 
 	$('[data-fancybox="c-img"]').fancybox({
-	  selector : '.owl-item:not(.cloned) a',
-	  hash   : false,
-	  thumbs : {
-	    autoStart : true
-	  },
-	  buttons : [
-	    'zoom',
-	    'download',
-	    'close'
-	  ]
+		selector : '.owl-item:not(.cloned) a',
+		hash   : false,
+		thumbs : {
+		autoStart : true
+		},
+		// buttons : [
+		// 	'zoom',
+		// 	'download',
+		// 	'close'
+		// ]
 	});
 
 	$('[data-fancybox]').fancybox({
-		protect: true
+		protect: true,
+		buttons : [
+			'zoom',
+			'fullScreen',
+			'close'
+		]
 	});
 
 	// // Check if current image dimensions are smaller than actual
@@ -866,10 +848,11 @@ $(document).ready(function(){
 	// });
 
 
+	// 頁面載入動畫loading
+	window.onload = function() { 
+		$(".load").fadeOut(400);
+	};
 
-
-	
-		
 
 });
 
