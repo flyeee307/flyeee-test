@@ -813,7 +813,7 @@ $(document).ready(function(){
 	function windowSize() {
 	    if ($(window).width() <= 736 || ($(window).width() >= 800 && $(window).width() <= 896)) {
 	        $('.jq-sqare-grid').show();
-	        $('.jq-grid').hide();
+	        $('.jq-grid').remove();
 	        // 正方形縮圖排版
 			var $gridS = $('.jq-sqare-grid').isotope({
 			  itemSelector: '.sqare-grid-item',
@@ -856,7 +856,7 @@ $(document).ready(function(){
 			  $gridS.isotope({ filter: filterValue });
 			});
 	    } else {
-	        $('.jq-sqare-grid').hide();
+	        $('.jq-sqare-grid').remove();
 	        $('.jq-grid').show();
 	        // init Isotope
 			var $gridL = $('.jq-grid').isotope({
