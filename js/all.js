@@ -632,13 +632,23 @@ $(document).ready(function(){
 	function isImgLoad(callback){
 	// 注意我的圖片類名都是cover，因為我只需要處理cover。其它圖片可以不管。
 		// 查詢所有封面圖，迭代處理
-		$('.grid-item img,.grid-item-content img').each(function(){
-			// 找到為0就將isLoad設為false，並退出each
-			if(this.height === 0){
-				isLoad = false;
-				return false;
-			}
-		});
+		var $imgLoad = $('.grid-item img,.grid-item-content img');
+		
+		// 找到為0就將isLoad設為false，並退出each
+		if($imgLoad.height() === 0){
+			isLoad = false;
+			return false;
+		}
+		
+
+		// $imgLoad.each(function(){
+		// 	// 找到為0就將isLoad設為false，並退出each
+		// 	if(this.height === 0){
+		// 		isLoad = false;
+		// 		return false;
+		// 	}
+		// });
+
 		// 為true，沒有發現為0的。載入完畢
 		if(isLoad){
 			$(".skeleton__product").fadeOut(400);
