@@ -832,23 +832,23 @@ $(document).ready(function(){
 			//   $gridS.isotope('layout');
 			// });
 
-			// layout Isotope after each image loads
-			$gridS.imagesLoaded().progress( function() {
-			  $gridS.isotope('layout');
-			});
-
-			// // init Isotope after all images have loaded
-			// var $gridS = $('.jq-sqare-grid').imagesLoaded( function() {
-			//   $gridS.isotope({
-			//     itemSelector: '.sqare-grid-item',
-			//     // percentPosition: true,
-			//     layoutMode: 'masonryHorizontal',
-			// 	masonryHorizontal: {
-			// 		rowHeight: 100,
-			// 		gutter: 30
-			//     }
-			//   });
+			// // layout Isotope after each image loads
+			// $gridS.imagesLoaded().progress( function() {
+			//   $gridS.isotope('layout');
 			// });
+
+			// init Isotope after all images have loaded
+			var $gridS = $('.jq-sqare-grid').imagesLoaded( function() {
+			  $gridS.isotope({
+			    itemSelector: '.sqare-grid-item',
+			    // percentPosition: true,
+			    layoutMode: 'masonryHorizontal',
+				masonryHorizontal: {
+					rowHeight: 100,
+					gutter: 30
+			    }
+			  });
+			});
 
 			// filter items on button click
 			$('.filter-button-group').on( 'click', 'button', function() {
