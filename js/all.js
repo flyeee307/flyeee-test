@@ -664,26 +664,26 @@ $(document).ready(function(){
 	// }
 
 
-	// 判斷圖片載入new
-	var imgdefereds=[];
-	$('.grid-item-content img').each(function(){
-		var dfd=$.Deferred();
-		$(this).bind('load',function(){
-			dfd.resolve();
-		}).bind('error',function(){
-		//圖片載入錯誤，加入錯誤處理
-		// dfd.resolve();
-		})
-		if(this.complete) setTimeout(function(){
-			dfd.resolve();
-			console.log('loaded!!');
-			$(".skeleton__product").fadeOut(400);
-		},1000);
-		imgdefereds.push(dfd);
-	})
-	$.when.apply(null,imgdefereds).done(function(){
-		// $(".skeleton__product").fadeOut(400);
-	});
+	// // 判斷圖片載入new
+	// var imgdefereds=[];
+	// $('.grid-item-content img').each(function(){
+	// 	var dfd=$.Deferred();
+	// 	$(this).bind('load',function(){
+	// 		dfd.resolve();
+	// 	}).bind('error',function(){
+	// 	//圖片載入錯誤，加入錯誤處理
+	// 	// dfd.resolve();
+	// 	})
+	// 	if(this.complete) setTimeout(function(){
+	// 		dfd.resolve();
+	// 		console.log('loaded!!');
+	// 		$(".skeleton__product").fadeOut(400);
+	// 	},1000);
+	// 	imgdefereds.push(dfd);
+	// })
+	// $.when.apply(null,imgdefereds).done(function(){
+	// 	// $(".skeleton__product").fadeOut(400);
+	// });
 
 
 	// $(".grid-item img").load(function(){
