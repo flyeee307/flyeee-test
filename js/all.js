@@ -579,11 +579,6 @@ $(document).ready(function(){
 	            autoplayTimeout:2000,
 	            nav:true
 	        },
-	        896:{
-	            items:1,
-	            slideBy:1,
-	            nav:true
-	        },
 	        1000:{
 	            items:3,
 	            slideBy:3,
@@ -609,7 +604,57 @@ $(document).ready(function(){
 	// lazyload
 	// $('.grid-item .lazyload').lazyload();
 
-	
+	// // vanilla-lazyload
+	// var lazyLoadInstance = new LazyLoad({
+	//   // Your custom settings go here
+	// });
+
+	// lazyLoadInstance.update();
+
+
+	// document.getElementsByTagName('.grid-item img').onload=function(){ 
+	// 	$(".skeleton__product").fadeOut(400);
+	// };
+
+	// $('.grid-item img,.grid-item-content img').load(function() {
+	// 	$(".skeleton__product").remove();
+	// });
+
+
+	// 判斷圖片載入
+	var t_img; // 定時器
+	var isLoad = true; // 控制變數
+	// 判斷圖片載入狀況，載入完成後回撥
+	isImgLoad(function(){
+	// 載入完成
+	});
+	// 判斷圖片載入的函式
+	function isImgLoad(callback){
+	// 注意我的圖片類名都是cover，因為我只需要處理cover。其它圖片可以不管。
+		// 查詢所有封面圖，迭代處理
+		$('.grid-item img,.grid-item-content img').each(function(){
+			// 找到為0就將isLoad設為false，並退出each
+			if(this.height === 0){
+				isLoad = false;
+				return false;
+			}
+		});
+		// 為true，沒有發現為0的。載入完畢
+		if(isLoad){
+			$(".skeleton__product").fadeOut(400);
+			// 回撥函式
+			callback();
+			// 為false，因為找到了沒有載入完成的圖，將呼叫定時器遞迴
+		}else{
+			isLoad = true;
+			t_img = setTimeout(function(){
+				isImgLoad(callback); // 遞迴掃描
+			},500); // 我這裡設定的是500毫秒就掃描一次，可以自己調整
+		}
+	}
+
+
+
 
 	// Isotope 圖片篩選插件
 	// $('.grid').isotope({
@@ -809,6 +854,26 @@ $(document).ready(function(){
 	windowSize();
 
 
+	// // skeleton loading效果
+	// const elements = {
+	//   skeleton: document.querySelector('.skeleton__product')
+	// }
+
+
+	// // Remove setTimeOut 
+	// setTimeOut(() => {
+	// window.addEventListener("load", () => {
+	//   document.body.style.overflow = "visible";
+	//   elements.skeleton.style.display = "none";
+	// });
+	// }, 15000);
+
+
+	$(".grid-item__inner").onload = function() { 
+		$(".skeleton__product").fadeOut(400);
+	};
+
+
 
 	// fancybox 設定
 	$('[data-fancybox="m-gallery"]').fancybox({
@@ -882,10 +947,12 @@ $(document).ready(function(){
 	// });
 
 
-	// 頁面載入動畫loading
-	window.onload = function() { 
-		$(".load").fadeOut(400);
-	};
+	// // 頁面載入動畫loading
+	// window.onload = function() { 
+	// 	$(".loading").fadeOut(400);
+	// };
+
+	
 
 
 });
