@@ -4921,7 +4921,7 @@
 
 
 
-/*:root {
+:root {
   --gradient: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
   --grey: #eee;
   --text: #ccc;
@@ -4987,7 +4987,7 @@
   100% {
     background-position: 30vw;
   }
-}*/
+}
 
 
 
