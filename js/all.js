@@ -621,47 +621,88 @@ $(document).ready(function(){
 	// });
 
 
-	// 判斷圖片載入
-	var t_img; // 定時器
-	var isLoad = true; // 控制變數
-	// 判斷圖片載入狀況，載入完成後回撥
-	isImgLoad(function(){
-	// 載入完成
+	// // 判斷圖片載入
+	// var t_img; // 定時器
+	// var isLoad = true; // 控制變數
+	// // 判斷圖片載入狀況，載入完成後回撥
+	// isImgLoad(function(){
+	// // 載入完成
+	// });
+	// // 判斷圖片載入的函式
+	// function isImgLoad(callback){
+	// // 注意我的圖片類名都是cover，因為我只需要處理cover。其它圖片可以不管。
+	// 	// 查詢所有封面圖，迭代處理
+	// 	var $imgLoad = $('.grid-item img,.grid-item-content img');
+		
+	// 	// 找到為0就將isLoad設為false，並退出each
+	// 	if($imgLoad.height === 0){
+	// 		isLoad = false;
+	// 		// return false;
+	// 	}
+		
+
+	// 	// $imgLoad.each(function(){
+	// 	// 	// 找到為0就將isLoad設為false，並退出each
+	// 	// 	if(this.height === 0){
+	// 	// 		isLoad = false;
+	// 	// 		return false;
+	// 	// 	}
+	// 	// });
+
+	// 	// 為true，沒有發現為0的。載入完畢
+	// 	if(isLoad){
+	// 		$(".skeleton__product").fadeOut(400);
+	// 		// 回撥函式
+	// 		callback();
+	// 		// 為false，因為找到了沒有載入完成的圖，將呼叫定時器遞迴
+	// 	}else{
+	// 		isLoad = true;
+	// 		t_img = setTimeout(function(){
+	// 			isImgLoad(callback); // 遞迴掃描
+	// 		},500); // 我這裡設定的是500毫秒就掃描一次，可以自己調整
+	// 	}
+	// }
+
+
+	// // 判斷圖片載入new
+	// var imgdefereds=[];
+	// $('.grid-item img,.grid-item-content img').each(function(){
+	// 	var dfd=$.Deferred();
+	// 	$(this).bind('load',function(){
+	// 		dfd.resolve();
+	// 	}).bind('error',function(){
+	// 	//圖片載入錯誤，加入錯誤處理
+	// 	// dfd.resolve();
+	// 	})
+	// 	if(this.complete) setTimeout(function(){
+	// 		dfd.resolve();
+	// 	},1000);
+	// 	imgdefereds.push(dfd);
+	// })
+	// $.when.apply(null,imgdefereds).done(function(){
+	// 	$(".skeleton__product").fadeOut(400);
+	// });
+
+
+	// $(".grid-item img").load(function(){
+	// 	console.log("載入完成！");
+	// 	$(".skeleton__product").fadeOut(400);
+	// });
+
+
+	// 判斷圖片載入new new
+	$('.grid-item img').each(function(){
+	    $(this).imagesLoaded(function(){
+	        console.log('loaded!!');
+	        $(".skeleton__product").fadeOut(400);
+	    });
 	});
-	// 判斷圖片載入的函式
-	function isImgLoad(callback){
-	// 注意我的圖片類名都是cover，因為我只需要處理cover。其它圖片可以不管。
-		// 查詢所有封面圖，迭代處理
-		var $imgLoad = $('.grid-item img,.grid-item-content img');
-		
-		// 找到為0就將isLoad設為false，並退出each
-		if($imgLoad.height() >= 100){
-			isLoad = true;
-			// return false;
-		}
-		
-
-		// $imgLoad.each(function(){
-		// 	// 找到為0就將isLoad設為false，並退出each
-		// 	if(this.height === 0){
-		// 		isLoad = false;
-		// 		return false;
-		// 	}
-		// });
-
-		// 為true，沒有發現為0的。載入完畢
-		if(isLoad){
-			$(".skeleton__product").fadeOut(400);
-			// 回撥函式
-			callback();
-			// 為false，因為找到了沒有載入完成的圖，將呼叫定時器遞迴
-		}else{
-			isLoad = true;
-			t_img = setTimeout(function(){
-				isImgLoad(callback); // 遞迴掃描
-			},500); // 我這裡設定的是500毫秒就掃描一次，可以自己調整
-		}
-	}
+	$('.grid-item-content img').each(function(){
+	    $(this).imagesLoaded(function(){
+	        console.log('loaded!!');
+	        $(".skeleton__product").fadeOut(400);
+	    });
+	});
 
 
 
