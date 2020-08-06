@@ -4411,8 +4411,9 @@
 }
 @media (min-width: 800px) and (max-width: 992px) and (orientation: landscape) {
 	.button-group {
-		position: fixed;
+		/*position: fixed;*/
 		padding: 8px 16px 0;
+		margin-bottom: 0;
 		background-color: #333333;
 	    top: 0;
 	    margin-left: -22px;
@@ -4423,6 +4424,11 @@
 @media (min-width: 896px) and (max-width: 992px) and (orientation: landscape) {
 	.button-group {
 	    margin-left: -14px;
+	}
+}
+@media (min-width: 1024px) {
+	.button-group {
+		margin-bottom: 4px;
 	}
 }
 .button-group .btn {
