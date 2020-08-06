@@ -635,9 +635,9 @@ $(document).ready(function(){
 		var $imgLoad = $('.grid-item img,.grid-item-content img');
 		
 		// 找到為0就將isLoad設為false，並退出each
-		if($imgLoad.height() === 0){
-			isLoad = false;
-			return false;
+		if($imgLoad.height() >= 100){
+			isLoad = true;
+			// return false;
 		}
 		
 
