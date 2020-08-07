@@ -131,27 +131,33 @@
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
 	background-color: #333333;
 	z-index: 9999;
 }
 .load-inner {
-	position: absolute;
+	/*position: absolute;*/
 	width: 8rem;
 	height: 8rem;
-	margin: 0 auto;
+	margin-top: -20px;
+	/*margin: 0 auto;*/
 	/*border: 1px solid red;*/
-	top: 45vh;
+	/*top: 45vh;
 	left: 50%;
 	-webkit-transform: translate(-50%,-50%);
 	   -moz-transform: translate(-50%,-50%);
 	    -ms-transform: translate(-50%,-50%);
 		 -o-transform: translate(-50%,-50%);
 	        transform: translate(-50%,-50%);
-    margin: 0 auto;
+    margin: 0 auto;*/
 }
 .loader {
 	/*font-size: 10px;*/
+	/*color: #fff;*/
 	/*margin: 50px auto;*/
 	/*text-indent: -9999em;*/
 	width: 100%;
@@ -248,6 +254,26 @@
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+.loader-text {
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 20px;
+	font-family: 'Helvetica', 'Noto Sans TC', 'Roboto', 'Arial', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 4rem;
+	letter-spacing: 4px;
+	z-index: 10;
+}
+.loader-text p {
+	font-size: 2.1rem;
+	font-weight: 500;
+	line-height: 2rem;
+	letter-spacing: 1rem;
+	/*padding: 0;*/
+	/*margin-top: 0;*/
+	margin-left: 4px;
 }
 /*.centered{
     width:100%;
@@ -4409,7 +4435,7 @@
 	padding: 0 16px;
 	margin-bottom: 24px;
 }
-@media (min-width: 800px) and (max-width: 992px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
 	.button-group {
 		/*position: fixed;*/
 		padding: 8px 16px 0;
@@ -4421,13 +4447,15 @@
 		z-index: 100;
 	}
 }
-@media (min-width: 896px) and (max-width: 992px) and (orientation: landscape) {
+@media (min-width: 800px) and (max-width: 992px) and (orientation: landscape) {
 	.button-group {
-	    margin-left: -14px;
+	    padding: 8px 46px 0;
+	    margin-left: -42px;
 	}
 }
 @media (min-width: 1024px) {
 	.button-group {
+		padding: 0;
 		margin-bottom: 4px;
 	}
 }
@@ -4454,7 +4482,7 @@
 }
 @media (min-width: 1024px) {
 	.button-group .btn {
-		min-width: initial;
+		/*min-width: initial;*/
 	}
 }
 .button-group .btn.is-active {
@@ -4921,7 +4949,7 @@
 
 
 
-:root {
+/*:root {
   --gradient: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
   --grey: #eee;
   --text: #ccc;
@@ -4987,7 +5015,7 @@
   100% {
     background-position: 30vw;
   }
-}
+}*/
 
 
 

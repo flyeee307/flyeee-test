@@ -14,9 +14,15 @@
 	<meta charset="UTF-8">
 	<!--讓IE使用最新的渲染模式-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--將下面的 <meta> 標籤加入到頁面中，可以讓部分國產瀏覽器預設採用高速模式渲染頁面：-->
     <meta name="renderer" content="webkit">
+
+    <meta name="Author" content="Flyeee Yang">
+    <meta name="keywords" content="Flyeee Yang,Flyeee,楊朝翔,作品集,設計作品集,Portfolio,作品集by Flyeee Yang,Portfolio | 作品集by Flyeee Yang,Designer,設計,設計師,網頁設計,網站設計,web design,HTML5,CSS3,JavaScript,Bootstrap,RWD,jQuery,UI,UI設計,UI design,插畫,繪圖,動畫">
+        
+    <meta name="description" content="我是Flyeee — 楊朝翔，網頁UI設計師。具備HTML5 / CSS3 / JavaScript / jQuery的網頁撰寫能力，熟悉Bootstrap響應式框架並能靈活使用，也擅長使用Sketch、Adobe XD等進行UI設計。在網頁UI設計上，結合擅長的電腦插畫繪圖、影音動畫剪輯能力，設計好用又美觀的網頁。">
+
 	<title>Flyeee Yang's Portfolio</title>
 	<!-- 放入頁籤的icon圖示 -->
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
@@ -66,12 +72,16 @@ mixpanel.init("c8af4b6de0579468f87dbdfa1abf9ca9", {batch_requests: true})</scrip
 <body>
 	<div class="loading">
 		<div class="load-inner">
-			<div class="loader">Loading...</div>
+			<div class="loader"></div>
+			
 		</div>
 		<!-- <div class = "centered">
 		    <div class = "blob-1"></div>
 		    <div class = "blob-2"></div>
 		</div> -->
+		<div class="loader-text">Flyeee Yang’s
+			<p>Portfolio</p>
+		</div>
 	</div>
 	<div class="wrapper">
 		<!-- Header -->
@@ -600,6 +610,9 @@ mixpanel.init("c8af4b6de0579468f87dbdfa1abf9ca9", {batch_requests: true})</scrip
 	<!-- <script src="js/plugin/stellar/jquery.stellar.min.js"></script> -->
 	<!-- <script src="js/plugin/jquery_mobile/jquery.mobile-1.4.5.min.js"></script> -->
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
 	<script src="js/plugin/OwlCarousel/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/plugin/TouchSwipe/jquery.touchSwipe.min.js"></script>
 
@@ -617,6 +630,21 @@ mixpanel.init("c8af4b6de0579468f87dbdfa1abf9ca9", {batch_requests: true})</scrip
 	<script src="js/all.js"></script>
 
 	<script>
+        $(".lazyload").lazyload();
+        $(document).ready(function() {
+            $("wrapper").hide();
+            setTimeout(function() {
+                $('.loading').fadeOut(1000);
+                $('wrapper').fadeIn(400);
+            }, 000);
+            // $('.sidenav').sidenav({
+            //     edge: 'right',
+            // });
+        });
+    </script>
+
+
+	<script>
 		mixpanel.track("pageview");
 
 		window.addEventListener("load", function(event) {
@@ -632,7 +660,7 @@ mixpanel.init("c8af4b6de0579468f87dbdfa1abf9ca9", {batch_requests: true})</scrip
 	<script>
 		// 頁面載入動畫loading
 		$(window).load(function() {
-			$('.loading').fadeOut(400);
+			// $('.loading').fadeOut(400);
 		});
 	</script>
 </body>
