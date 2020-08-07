@@ -4361,6 +4361,7 @@
 	float: left;
 	padding: 5px;
 	margin: 0;
+	overflow: hidden;
 	/*border: 1px solid red;*/
 }
 @media (min-width: 414px) {
@@ -4380,12 +4381,35 @@
 		width: 33.33333%;
 	}
 }
+.grid-item__inner:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	-webkit-transition: all 0.3s ease;
+	   -moz-transition: all 0.3s ease;
+	    -ms-transition: all 0.3s ease;
+		 -o-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
+	z-index: 100;
+} 
+.grid-item__inner:hover:after {
+	background-color: rgba(0,0,0,.5);
+}
 .grid-item img {
 	display: block;
 	max-width: 100%;
+	-webkit-transition: all 0.3s ease;
+	   -moz-transition: all 0.3s ease;
+	    -ms-transition: all 0.3s ease;
+		 -o-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
 	z-index: 98;
 }
-.grid-item:hover .grid-item__inner {
+/*.grid-item:hover .grid-item__inner {
 	-webkit-transform: scale(1.2);
 	   -moz-transform: scale(1.2);
 	    -ms-transform: scale(1.2);
@@ -4393,6 +4417,29 @@
 	        transform: scale(1.2);
 	box-shadow: 0 0 20px rgba(0,0,0,.5);
 	z-index: 100;
+}*/
+.grid-item:hover img {
+	-webkit-transform: scale(1.2);
+	   -moz-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+		 -o-transform: scale(1.2);
+	        transform: scale(1.2);
+	box-shadow: 0 0 20px rgba(0,0,0,.5);
+	z-index: 100;
+}
+.grid-item .img-text {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	width: 100%;
+	height: 100%;
+	/*border: 3px solid red;*/
+	z-index: 999;
+}
+.grid-item h5 {
+	color: #FFFFFF;
+	z-index: 999;
 }
 .grid-item__inner {
 	width: 100%;
@@ -4406,8 +4453,11 @@
 		 -o-transition: all 0.3s ease;
 	        transition: all 0.3s ease;
 }
+.grid-item__inner a {
+	display: block;
+}
 /* hover時顯示底部黑色漸層 */
-.grid-item__inner:after {
+/*.grid-item__inner:after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -4426,10 +4476,7 @@
 		 -o-transition: all 0.3s ease;
 	        transition: all 0.3s ease;
 	z-index: 100;
-}
-.grid-item:hover :after {
-	/*height: 100px;*/
-}
+}*/
 .button-group {
 	/*width: 100%;*/
 	padding: 0 16px;
@@ -4628,7 +4675,7 @@
 /* item is invisible, but used for layout */
 .sqare-grid-item {
 	width: auto;
-	height: 100px;
+	height: auto;
 	/*height: 100px;*/
 	margin-right: 10px;
 	overflow: hidden;

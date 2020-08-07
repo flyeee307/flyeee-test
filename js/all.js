@@ -1005,6 +1005,18 @@ $(document).ready(function(){
 
 	
 
+	// 滑鼠移入顯示圖說
+	$('.grid-item').mouseenter(function(){
+		var imgText = $(this).find('a').attr('data-caption');
+		// console.log(imgText);
+	    $(this).find('h5').append(imgText);
+	});
+	$('.grid-item').mouseleave(function(){
+		// var imgText = $(this).find('a').attr('data-caption');
+		// console.log(imgText);
+	    $(this).find('h5').text('');
+	});
+	
 
 });
 
