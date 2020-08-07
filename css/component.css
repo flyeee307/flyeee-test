@@ -4746,6 +4746,7 @@ body {
 	    -ms-transition: all 0.3s;
 		 -o-transition: all 0.3s;
             transition: all 0.3s;
+    user-select: none;
 	z-index: 98;
 }
 .horizon img {
