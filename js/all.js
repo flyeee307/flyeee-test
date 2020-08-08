@@ -815,17 +815,108 @@ $(document).ready(function(){
 	        $('.jq-sqare-grid').show();
 	        $('.jq-grid').hide();
 	        // 正方形縮圖排版
-			var $gridS = $('.jq-sqare-grid').isotope({
-			  itemSelector: '.sqare-grid-item',
-			  layoutMode: 'masonryHorizontal',
-			  masonryHorizontal: {
-			    // columnWidth: '.sqare-grid-item',
-			 //    rowHeight: 100,
-				// gutter: 10,
+			// var $gridS = $('.jq-sqare-grid').isotope({
+			//   itemSelector: '.sqare-grid-item',
+			//   layoutMode: 'masonryHorizontal',
+			//   masonryHorizontal: {
+			//     // columnWidth: '.sqare-grid-item',
+			//  //    rowHeight: 100,
+			// 	// gutter: 10,
+			// 	rowHeight: 100,
+			// 	gutter: 30
+			//   }
+			// });
+
+
+			// var $win = $(window);
+		 //    var $imgs = $(".lazy-img");
+
+			// $gridS.isotope({
+			//     onLayout: function() {
+			//         $win.trigger("scroll");
+			//     }
+			// });
+
+			// $imgs.lazyload({
+			//     failure_limit: Math.max($imgs.length - 1, 0)
+		 //    });
+
+
+			var $win = $(window),
+		        $imgs = $(".lazy-img"),
+		        $gridS = $('.jq-sqare-grid');
+
+	        $imgs.show().lazyload({
+		        effect: "fadeIn",
+		        failure_limit: Math.max($imgs.length - 1, 0)
+		    });
+
+		    $gridS.isotope({
+		        itemSelector: '.sqare-grid-item',
+				layoutMode: 'masonryHorizontal',
+				masonryHorizontal: {
 				rowHeight: 100,
 				gutter: 30
-			  }
-			});
+				},
+		        onLayout: function () {
+		            $win.trigger("scroll");
+		        }
+		    });
+
+		 //    function loadVisible($els, trigger) {
+		 //        $els.filter(function () {
+		 //            var rect = this.getBoundingClientRect();
+		 //            return rect.top >= 0 && rect.top <= window.innerHeight;
+		 //        }).trigger(trigger);
+		 //    }
+
+		 //    $gridS.isotope('on', 'layoutComplete', function () {
+		 //        loadVisible($imgs, 'lazylazy');
+		 //    });
+
+		 //    $win.on('scroll', function () {
+		 //        loadVisible($imgs, 'lazylazy');
+		 //    });
+
+		 //    $imgs.lazyload({
+		 //        effect: "fadeIn",
+		 //        failure_limit: Math.max($imgs.length - 1, 0),
+		 //        event: 'lazylazy'
+		 //    });
+
+		    // $('#asc').click(function (event) {
+		    //     $gridS.isotope({
+		    //         sortAscending: true,
+		    //         sortBy: 'original'
+		    //     });
+		    // });
+
+		    // $('#desc').click(function (event) {
+		    //     $gridS.isotope({
+		    //         sortAscending: false,
+		    //         sortBy: 'original'
+		    //     });
+		    // });
+
+		    // $('#thin').click(function (event) {
+		    //     $gridS.isotope({
+		    //         sortAscending: true,
+		    //         filter: 'img[width="333"]',
+		    //         sortBy: 'original'
+		    //     });
+		    // });
+
+		    // $('#all').click(function (event) {
+		    //     $gridS.isotope({
+		    //         sortAscending: true,
+		    //         filter: '',
+		    //         sortBy: 'original'
+		    //     });
+		    // });
+
+
+
+
 
 			// $gridS.on( 'click', '.grid-item-content', function() {
 			//   $( this ).parent('.sqare-grid-item').toggleClass('is-expanded');
@@ -1016,8 +1107,23 @@ $(document).ready(function(){
 		// console.log(imgText);
 	    $(this).find('h5').text('');
 	});
+
+
+	// 行動版雙擊按鈕時禁用縮放
+	var doubleTouchStartTimestamp = 0;
+	$(document).bind("touchstart", function (event) {
+	    var now = +(new Date());
+	    if (doubleTouchStartTimestamp + 500 > now) {
+	        event.preventDefault();
+	    }
+	    doubleTouchStartTimestamp = now;
+	});
+
+
+
 	
 
 });
+
 
 

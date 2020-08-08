@@ -2066,6 +2066,7 @@ body {
 	/*overflow: hidden;*/
 	z-index: -1;
 	/*transform: translate3d(-23%, -30%, -1px);*/
+	font-size: 0;
 }
 .color-mask {
 	width: 100%;
