@@ -1,0 +1,3 @@
+User-agent: Googlebot-Image
+Disallow: /images/portfolio/thumbnail/Sketch版面設計_作品及網站mobile版.png
+Disallow: /images/portfolio/originalSize/Sketch版面設計_作品及網站desktop版.png
